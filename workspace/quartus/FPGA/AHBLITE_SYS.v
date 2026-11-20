@@ -66,7 +66,13 @@ module AHBLITE_SYS(
     output      wire            SRAM_LB_N,
     output      wire            SRAM_CE_N,
     output      wire            SRAM_OE_N,
-    output      wire            SRAM_WE_N
+    output      wire            SRAM_WE_N,
+
+    // External SEGDEC
+    output      wire [6:0]  HEX0,
+    output      wire [6:0]  HEX1,
+    output      wire [6:0]  HEX2,
+    output      wire [6:0]  HEX3
 );
  
  	//VGA IO
@@ -110,16 +116,19 @@ wire [3:0] 		MUX_SEL;
 wire 			HSEL_MEM;
 wire 			HSEL_VGA;
 wire            HSEL_SRAM;
+wire            HSEL_SEG;
 
 //SLAVE READ DATA
 wire [31:0] 	HRDATA_MEM;
 wire [31:0] 	HRDATA_VGA;
 wire [31:0]     HRDATA_SRAM;
+wire [31:0]     HRDATA_SEG;
 
 //SLAVE HREADYOUT
 wire 			HREADYOUT_MEM;
 wire 			HREADYOUT_VGA;
 wire            HREADYOUT_SRAM;
+wire            HREADYOUT_SEG;
 
 //CM0-DS Sideband signals
 wire [31:0]		IRQ;
@@ -267,7 +276,7 @@ AHBDCD uAHBDCD (
 	.HSEL_S0(HSEL_MEM),
 	.HSEL_S1(HSEL_VGA),
     .HSEL_S2(HSEL_SRAM),
-    .HSEL_S3(),
+    .HSEL_S3(HSEL_SEG),
     .HSEL_S4(),
     .HSEL_S5(),
     .HSEL_S6(),
@@ -289,7 +298,7 @@ AHBMUX uAHBMUX (
 	.HRDATA_S0(HRDATA_MEM),
 	.HRDATA_S1(HRDATA_VGA),
 	.HRDATA_S2(HRDATA_SRAM),
-	.HRDATA_S3(32'h00000000),
+	.HRDATA_S3(HRDATA_SEG),
 	.HRDATA_S4(32'h00000000),
 	.HRDATA_S5(32'h00000000),
 	.HRDATA_S6(32'h00000000),
@@ -301,7 +310,7 @@ AHBMUX uAHBMUX (
 	.HREADYOUT_S0(HREADYOUT_MEM),
 	.HREADYOUT_S1(HREADYOUT_VGA),
 	.HREADYOUT_S2(HREADYOUT_SRAM),
-	.HREADYOUT_S3(1'b1),
+	.HREADYOUT_S3(HREADYOUT_SEG),
 	.HREADYOUT_S4(1'b1),
 	.HREADYOUT_S5(1'b1),
 	.HREADYOUT_S6(1'b1),
@@ -371,6 +380,28 @@ AHB2SRAM uAHB2SRAM (
     .SRAM_CE_N(SRAM_CE_N),
     .SRAM_OE_N(SRAM_OE_N),
     .SRAM_WE_N(SRAM_WE_N)
+);
+
+AHB7SEGDEC uAHB7SEGDEC (
+    //AHBLITE Signals
+    .HSEL(HSEL_SEG),
+    
+    .HCLK(HCLK),
+    .HRESETn(HRESETn),
+    .HREADY(HREADY),
+    .HADDR(HADDR),
+    .HTRANS(HTRANS),
+    .HWRITE(HWRITE),
+    //.HSIZE(HSIZE),
+    .HWDATA(HWDATA),
+    
+    .HRDATA(HRDATA_SEG),
+    .HREADYOUT(HREADYOUT_SEG),
+
+    .seg0(HEX0),
+    .seg1(HEX1),
+    .seg2(HEX2),
+    .seg3(HEX3)
 );
 
 endmodule

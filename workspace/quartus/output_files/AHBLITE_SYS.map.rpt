@@ -1,5 +1,5 @@
 Analysis & Synthesis report for AHBLITE_SYS
-Wed Nov 18 11:22:05 2026
+Fri Nov 20 16:24:27 2026
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -30,24 +30,26 @@ Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
  22. Parameter Settings for User Entity Instance: AHBVGA:uAHBVGA|VGAInterface:uVGAInterface|GenericCounter:VertAddrCounter
  23. Parameter Settings for User Entity Instance: AHBVGA:uAHBVGA|vga_console:uvga_console|dual_port_ram_sync:uvideo_ram
  24. Parameter Settings for User Entity Instance: AHBVGA:uAHBVGA|vga_image:uvga_image|dual_port_ram_sync:uimage_ram
- 25. Parameter Settings for Inferred Entity Instance: AHBVGA:uAHBVGA|vga_image:uvga_image|dual_port_ram_sync:uimage_ram|altsyncram:ram_rtl_0
- 26. Parameter Settings for Inferred Entity Instance: AHBVGA:uAHBVGA|vga_console:uvga_console|dual_port_ram_sync:uvideo_ram|altsyncram:ram_rtl_0
- 27. Parameter Settings for Inferred Entity Instance: CORTEXM0INTEGRATION:u_CORTEXM0INTEGRATION|cortexm0ds_logic:u_logic|lpm_mult:Mult0
- 28. altsyncram Parameter Settings by Entity Instance
- 29. lpm_mult Parameter Settings by Entity Instance
- 30. Port Connectivity Checks: "AHBVGA:uAHBVGA|vga_image:uvga_image|dual_port_ram_sync:uimage_ram"
- 31. Port Connectivity Checks: "AHBVGA:uAHBVGA|vga_image:uvga_image"
- 32. Port Connectivity Checks: "AHBVGA:uAHBVGA|vga_console:uvga_console|dual_port_ram_sync:uvideo_ram"
- 33. Port Connectivity Checks: "AHBVGA:uAHBVGA|VGAInterface:uVGAInterface|GenericCounter:VertAddrCounter"
- 34. Port Connectivity Checks: "AHBVGA:uAHBVGA|VGAInterface:uVGAInterface|GenericCounter:HorzAddrCounter"
- 35. Port Connectivity Checks: "AHBVGA:uAHBVGA|VGAInterface:uVGAInterface|GenericCounter:FreqDivider"
- 36. Port Connectivity Checks: "AHBMUX:uAHBMUX"
- 37. Port Connectivity Checks: "AHBDCD:uAHBDCD"
- 38. Port Connectivity Checks: "CORTEXM0INTEGRATION:u_CORTEXM0INTEGRATION"
- 39. Post-Synthesis Netlist Statistics for Top Partition
- 40. Elapsed Time Per Partition
- 41. Analysis & Synthesis Messages
- 42. Analysis & Synthesis Suppressed Messages
+ 25. Parameter Settings for User Entity Instance: AHB2SRAM:uAHB2SRAM
+ 26. Parameter Settings for User Entity Instance: AHB7SEGDEC:uAHB7SEGDEC
+ 27. Parameter Settings for Inferred Entity Instance: AHBVGA:uAHBVGA|vga_image:uvga_image|dual_port_ram_sync:uimage_ram|altsyncram:ram_rtl_0
+ 28. Parameter Settings for Inferred Entity Instance: AHBVGA:uAHBVGA|vga_console:uvga_console|dual_port_ram_sync:uvideo_ram|altsyncram:ram_rtl_0
+ 29. Parameter Settings for Inferred Entity Instance: CORTEXM0INTEGRATION:u_CORTEXM0INTEGRATION|cortexm0ds_logic:u_logic|lpm_mult:Mult0
+ 30. altsyncram Parameter Settings by Entity Instance
+ 31. lpm_mult Parameter Settings by Entity Instance
+ 32. Port Connectivity Checks: "AHBVGA:uAHBVGA|vga_image:uvga_image|dual_port_ram_sync:uimage_ram"
+ 33. Port Connectivity Checks: "AHBVGA:uAHBVGA|vga_image:uvga_image"
+ 34. Port Connectivity Checks: "AHBVGA:uAHBVGA|vga_console:uvga_console|dual_port_ram_sync:uvideo_ram"
+ 35. Port Connectivity Checks: "AHBVGA:uAHBVGA|VGAInterface:uVGAInterface|GenericCounter:VertAddrCounter"
+ 36. Port Connectivity Checks: "AHBVGA:uAHBVGA|VGAInterface:uVGAInterface|GenericCounter:HorzAddrCounter"
+ 37. Port Connectivity Checks: "AHBVGA:uAHBVGA|VGAInterface:uVGAInterface|GenericCounter:FreqDivider"
+ 38. Port Connectivity Checks: "AHBMUX:uAHBMUX"
+ 39. Port Connectivity Checks: "AHBDCD:uAHBDCD"
+ 40. Port Connectivity Checks: "CORTEXM0INTEGRATION:u_CORTEXM0INTEGRATION"
+ 41. Post-Synthesis Netlist Statistics for Top Partition
+ 42. Elapsed Time Per Partition
+ 43. Analysis & Synthesis Messages
+ 44. Analysis & Synthesis Suppressed Messages
 
 
 
@@ -73,16 +75,16 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Wed Nov 18 11:22:04 2026       ;
+; Analysis & Synthesis Status        ; Successful - Fri Nov 20 16:24:27 2026       ;
 ; Quartus Prime Version              ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                      ; AHBLITE_SYS                                 ;
 ; Top-level Entity Name              ; AHBLITE_SYS                                 ;
 ; Family                             ; Cyclone IV E                                ;
-; Total logic elements               ; 14,861                                      ;
-;     Total combinational functions  ; 10,722                                      ;
-;     Dedicated logic registers      ; 5,671                                       ;
-; Total registers                    ; 5671                                        ;
-; Total pins                         ; 53                                          ;
+; Total logic elements               ; 15,169                                      ;
+;     Total combinational functions  ; 10,767                                      ;
+;     Dedicated logic registers      ; 5,746                                       ;
+; Total registers                    ; 5746                                        ;
+; Total pins                         ; 122                                         ;
 ; Total virtual pins                 ; 0                                           ;
 ; Total memory bits                  ; 159,744                                     ;
 ; Embedded Multiplier 9-bit elements ; 6                                           ;
@@ -195,46 +197,48 @@ refer to the applicable agreement for further details.
 +----------------------------+-------------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                                                                                                     ;
-+----------------------------------------+-----------------+---------------------------------------------+-------------------------------------------------------------------------------------------------------------------------+---------+
-; File Name with User-Entered Path       ; Used in Netlist ; File Type                                   ; File Name with Absolute Path                                                                                            ; Library ;
-+----------------------------------------+-----------------+---------------------------------------------+-------------------------------------------------------------------------------------------------------------------------+---------+
-; FPGA/AHB_VGA/vga_sync.v                ; yes             ; User Verilog HDL File                       ; C:/Users/idec/Desktop/chohyunkeon/project/FPGA-SRAM-controller/workspace/quartus/FPGA/AHB_VGA/vga_sync.v                ;         ;
-; FPGA/AHB_VGA/vga_image.v               ; yes             ; User Verilog HDL File                       ; C:/Users/idec/Desktop/chohyunkeon/project/FPGA-SRAM-controller/workspace/quartus/FPGA/AHB_VGA/vga_image.v               ;         ;
-; FPGA/AHB_VGA/vga_console.v             ; yes             ; User Verilog HDL File                       ; C:/Users/idec/Desktop/chohyunkeon/project/FPGA-SRAM-controller/workspace/quartus/FPGA/AHB_VGA/vga_console.v             ;         ;
-; FPGA/AHB_VGA/font_rom.v                ; yes             ; User Verilog HDL File                       ; C:/Users/idec/Desktop/chohyunkeon/project/FPGA-SRAM-controller/workspace/quartus/FPGA/AHB_VGA/font_rom.v                ;         ;
-; FPGA/AHB_VGA/dual_port_ram_sync.v      ; yes             ; User Verilog HDL File                       ; C:/Users/idec/Desktop/chohyunkeon/project/FPGA-SRAM-controller/workspace/quartus/FPGA/AHB_VGA/dual_port_ram_sync.v      ;         ;
-; FPGA/AHB_VGA/counter.v                 ; yes             ; User Verilog HDL File                       ; C:/Users/idec/Desktop/chohyunkeon/project/FPGA-SRAM-controller/workspace/quartus/FPGA/AHB_VGA/counter.v                 ;         ;
-; FPGA/AHB_VGA/AHBVGASYS.v               ; yes             ; User Verilog HDL File                       ; C:/Users/idec/Desktop/chohyunkeon/project/FPGA-SRAM-controller/workspace/quartus/FPGA/AHB_VGA/AHBVGASYS.v               ;         ;
-; FPGA/AHB_BRAM/AHB2BRAM.v               ; yes             ; User Verilog HDL File                       ; C:/Users/idec/Desktop/chohyunkeon/project/FPGA-SRAM-controller/workspace/quartus/FPGA/AHB_BRAM/AHB2BRAM.v               ;         ;
-; FPGA/AHB_BUS/AHBMUX.v                  ; yes             ; User Verilog HDL File                       ; C:/Users/idec/Desktop/chohyunkeon/project/FPGA-SRAM-controller/workspace/quartus/FPGA/AHB_BUS/AHBMUX.v                  ;         ;
-; FPGA/AHB_BUS/AHBDCD.v                  ; yes             ; User Verilog HDL File                       ; C:/Users/idec/Desktop/chohyunkeon/project/FPGA-SRAM-controller/workspace/quartus/FPGA/AHB_BUS/AHBDCD.v                  ;         ;
-; FPGA/CortexM0-DS/CORTEXM0INTEGRATION.v ; yes             ; User Verilog HDL File                       ; C:/Users/idec/Desktop/chohyunkeon/project/FPGA-SRAM-controller/workspace/quartus/FPGA/CortexM0-DS/CORTEXM0INTEGRATION.v ;         ;
-; FPGA/CortexM0-DS/cortexm0ds_logic.v    ; yes             ; User Verilog HDL File                       ; C:/Users/idec/Desktop/chohyunkeon/project/FPGA-SRAM-controller/workspace/quartus/FPGA/CortexM0-DS/cortexm0ds_logic.v    ;         ;
-; FPGA/AHBLITE_SYS.v                     ; yes             ; User Verilog HDL File                       ; C:/Users/idec/Desktop/chohyunkeon/project/FPGA-SRAM-controller/workspace/quartus/FPGA/AHBLITE_SYS.v                     ;         ;
-; fpga/ahb_bram/code.hex                 ; yes             ; Auto-Found Hexadecimal (Intel-Format) File  ; C:/Users/idec/Desktop/chohyunkeon/project/FPGA-SRAM-controller/workspace/quartus/fpga/ahb_bram/code.hex                 ;         ;
-; altsyncram.tdf                         ; yes             ; Megafunction                                ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/altsyncram.tdf                                                   ;         ;
-; stratix_ram_block.inc                  ; yes             ; Megafunction                                ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/stratix_ram_block.inc                                            ;         ;
-; lpm_mux.inc                            ; yes             ; Megafunction                                ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/lpm_mux.inc                                                      ;         ;
-; lpm_decode.inc                         ; yes             ; Megafunction                                ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/lpm_decode.inc                                                   ;         ;
-; aglobal181.inc                         ; yes             ; Megafunction                                ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/aglobal181.inc                                                   ;         ;
-; a_rdenreg.inc                          ; yes             ; Megafunction                                ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/a_rdenreg.inc                                                    ;         ;
-; altrom.inc                             ; yes             ; Megafunction                                ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/altrom.inc                                                       ;         ;
-; altram.inc                             ; yes             ; Megafunction                                ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/altram.inc                                                       ;         ;
-; altdpram.inc                           ; yes             ; Megafunction                                ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/altdpram.inc                                                     ;         ;
-; db/altsyncram_cul1.tdf                 ; yes             ; Auto-Generated Megafunction                 ; C:/Users/idec/Desktop/chohyunkeon/project/FPGA-SRAM-controller/workspace/quartus/db/altsyncram_cul1.tdf                 ;         ;
-; db/decode_msa.tdf                      ; yes             ; Auto-Generated Megafunction                 ; C:/Users/idec/Desktop/chohyunkeon/project/FPGA-SRAM-controller/workspace/quartus/db/decode_msa.tdf                      ;         ;
-; db/decode_f8a.tdf                      ; yes             ; Auto-Generated Megafunction                 ; C:/Users/idec/Desktop/chohyunkeon/project/FPGA-SRAM-controller/workspace/quartus/db/decode_f8a.tdf                      ;         ;
-; db/mux_6nb.tdf                         ; yes             ; Auto-Generated Megafunction                 ; C:/Users/idec/Desktop/chohyunkeon/project/FPGA-SRAM-controller/workspace/quartus/db/mux_6nb.tdf                         ;         ;
-; db/altsyncram_mql1.tdf                 ; yes             ; Auto-Generated Megafunction                 ; C:/Users/idec/Desktop/chohyunkeon/project/FPGA-SRAM-controller/workspace/quartus/db/altsyncram_mql1.tdf                 ;         ;
-; lpm_mult.tdf                           ; yes             ; Megafunction                                ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/lpm_mult.tdf                                                     ;         ;
-; lpm_add_sub.inc                        ; yes             ; Megafunction                                ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/lpm_add_sub.inc                                                  ;         ;
-; multcore.inc                           ; yes             ; Megafunction                                ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/multcore.inc                                                     ;         ;
-; bypassff.inc                           ; yes             ; Megafunction                                ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/bypassff.inc                                                     ;         ;
-; altshift.inc                           ; yes             ; Megafunction                                ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/altshift.inc                                                     ;         ;
-; db/mult_7dt.tdf                        ; yes             ; Auto-Generated Megafunction                 ; C:/Users/idec/Desktop/chohyunkeon/project/FPGA-SRAM-controller/workspace/quartus/db/mult_7dt.tdf                        ;         ;
-+----------------------------------------+-----------------+---------------------------------------------+-------------------------------------------------------------------------------------------------------------------------+---------+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                                                                                                                   ;
++--------------------------------------------------------------------------------------+-----------------+---------------------------------------------+-------------------------------------------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path                                                     ; Used in Netlist ; File Type                                   ; File Name with Absolute Path                                                                                            ; Library ;
++--------------------------------------------------------------------------------------+-----------------+---------------------------------------------+-------------------------------------------------------------------------------------------------------------------------+---------+
+; FPGA/AHB_7SEGDEC/AHB7SEGDEC.v                                                        ; yes             ; User Verilog HDL File                       ; C:/Users/idec/Desktop/chohyunkeon/project/FPGA-SRAM-controller/workspace/quartus/FPGA/AHB_7SEGDEC/AHB7SEGDEC.v          ;         ;
+; FPGA/AHB_VGA/vga_sync.v                                                              ; yes             ; User Verilog HDL File                       ; C:/Users/idec/Desktop/chohyunkeon/project/FPGA-SRAM-controller/workspace/quartus/FPGA/AHB_VGA/vga_sync.v                ;         ;
+; FPGA/AHB_VGA/vga_image.v                                                             ; yes             ; User Verilog HDL File                       ; C:/Users/idec/Desktop/chohyunkeon/project/FPGA-SRAM-controller/workspace/quartus/FPGA/AHB_VGA/vga_image.v               ;         ;
+; FPGA/AHB_VGA/vga_console.v                                                           ; yes             ; User Verilog HDL File                       ; C:/Users/idec/Desktop/chohyunkeon/project/FPGA-SRAM-controller/workspace/quartus/FPGA/AHB_VGA/vga_console.v             ;         ;
+; FPGA/AHB_VGA/font_rom.v                                                              ; yes             ; User Verilog HDL File                       ; C:/Users/idec/Desktop/chohyunkeon/project/FPGA-SRAM-controller/workspace/quartus/FPGA/AHB_VGA/font_rom.v                ;         ;
+; FPGA/AHB_VGA/dual_port_ram_sync.v                                                    ; yes             ; User Verilog HDL File                       ; C:/Users/idec/Desktop/chohyunkeon/project/FPGA-SRAM-controller/workspace/quartus/FPGA/AHB_VGA/dual_port_ram_sync.v      ;         ;
+; FPGA/AHB_VGA/counter.v                                                               ; yes             ; User Verilog HDL File                       ; C:/Users/idec/Desktop/chohyunkeon/project/FPGA-SRAM-controller/workspace/quartus/FPGA/AHB_VGA/counter.v                 ;         ;
+; FPGA/AHB_VGA/AHBVGASYS.v                                                             ; yes             ; User Verilog HDL File                       ; C:/Users/idec/Desktop/chohyunkeon/project/FPGA-SRAM-controller/workspace/quartus/FPGA/AHB_VGA/AHBVGASYS.v               ;         ;
+; FPGA/AHB_BRAM/AHB2BRAM.v                                                             ; yes             ; User Verilog HDL File                       ; C:/Users/idec/Desktop/chohyunkeon/project/FPGA-SRAM-controller/workspace/quartus/FPGA/AHB_BRAM/AHB2BRAM.v               ;         ;
+; FPGA/AHB_BUS/AHBMUX.v                                                                ; yes             ; User Verilog HDL File                       ; C:/Users/idec/Desktop/chohyunkeon/project/FPGA-SRAM-controller/workspace/quartus/FPGA/AHB_BUS/AHBMUX.v                  ;         ;
+; FPGA/AHB_BUS/AHBDCD.v                                                                ; yes             ; User Verilog HDL File                       ; C:/Users/idec/Desktop/chohyunkeon/project/FPGA-SRAM-controller/workspace/quartus/FPGA/AHB_BUS/AHBDCD.v                  ;         ;
+; FPGA/CortexM0-DS/CORTEXM0INTEGRATION.v                                               ; yes             ; User Verilog HDL File                       ; C:/Users/idec/Desktop/chohyunkeon/project/FPGA-SRAM-controller/workspace/quartus/FPGA/CortexM0-DS/CORTEXM0INTEGRATION.v ;         ;
+; FPGA/CortexM0-DS/cortexm0ds_logic.v                                                  ; yes             ; User Verilog HDL File                       ; C:/Users/idec/Desktop/chohyunkeon/project/FPGA-SRAM-controller/workspace/quartus/FPGA/CortexM0-DS/cortexm0ds_logic.v    ;         ;
+; FPGA/AHBLITE_SYS.v                                                                   ; yes             ; User Verilog HDL File                       ; C:/Users/idec/Desktop/chohyunkeon/project/FPGA-SRAM-controller/workspace/quartus/FPGA/AHBLITE_SYS.v                     ;         ;
+; ../../rtl/AHB2SRAM.sv                                                                ; yes             ; User SystemVerilog HDL File                 ; C:/Users/idec/Desktop/chohyunkeon/project/FPGA-SRAM-controller/rtl/AHB2SRAM.sv                                          ;         ;
+; /users/idec/desktop/chohyunkeon/project/fpga-sram-controller/workspace/keil/code.hex ; yes             ; Auto-Found Hexadecimal (Intel-Format) File  ; /users/idec/desktop/chohyunkeon/project/fpga-sram-controller/workspace/keil/code.hex                                    ;         ;
+; altsyncram.tdf                                                                       ; yes             ; Megafunction                                ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/altsyncram.tdf                                                   ;         ;
+; stratix_ram_block.inc                                                                ; yes             ; Megafunction                                ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/stratix_ram_block.inc                                            ;         ;
+; lpm_mux.inc                                                                          ; yes             ; Megafunction                                ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/lpm_mux.inc                                                      ;         ;
+; lpm_decode.inc                                                                       ; yes             ; Megafunction                                ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/lpm_decode.inc                                                   ;         ;
+; aglobal181.inc                                                                       ; yes             ; Megafunction                                ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/aglobal181.inc                                                   ;         ;
+; a_rdenreg.inc                                                                        ; yes             ; Megafunction                                ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/a_rdenreg.inc                                                    ;         ;
+; altrom.inc                                                                           ; yes             ; Megafunction                                ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/altrom.inc                                                       ;         ;
+; altram.inc                                                                           ; yes             ; Megafunction                                ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/altram.inc                                                       ;         ;
+; altdpram.inc                                                                         ; yes             ; Megafunction                                ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/altdpram.inc                                                     ;         ;
+; db/altsyncram_cul1.tdf                                                               ; yes             ; Auto-Generated Megafunction                 ; C:/Users/idec/Desktop/chohyunkeon/project/FPGA-SRAM-controller/workspace/quartus/db/altsyncram_cul1.tdf                 ;         ;
+; db/decode_msa.tdf                                                                    ; yes             ; Auto-Generated Megafunction                 ; C:/Users/idec/Desktop/chohyunkeon/project/FPGA-SRAM-controller/workspace/quartus/db/decode_msa.tdf                      ;         ;
+; db/decode_f8a.tdf                                                                    ; yes             ; Auto-Generated Megafunction                 ; C:/Users/idec/Desktop/chohyunkeon/project/FPGA-SRAM-controller/workspace/quartus/db/decode_f8a.tdf                      ;         ;
+; db/mux_6nb.tdf                                                                       ; yes             ; Auto-Generated Megafunction                 ; C:/Users/idec/Desktop/chohyunkeon/project/FPGA-SRAM-controller/workspace/quartus/db/mux_6nb.tdf                         ;         ;
+; db/altsyncram_mql1.tdf                                                               ; yes             ; Auto-Generated Megafunction                 ; C:/Users/idec/Desktop/chohyunkeon/project/FPGA-SRAM-controller/workspace/quartus/db/altsyncram_mql1.tdf                 ;         ;
+; lpm_mult.tdf                                                                         ; yes             ; Megafunction                                ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/lpm_mult.tdf                                                     ;         ;
+; lpm_add_sub.inc                                                                      ; yes             ; Megafunction                                ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/lpm_add_sub.inc                                                  ;         ;
+; multcore.inc                                                                         ; yes             ; Megafunction                                ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/multcore.inc                                                     ;         ;
+; bypassff.inc                                                                         ; yes             ; Megafunction                                ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/bypassff.inc                                                     ;         ;
+; altshift.inc                                                                         ; yes             ; Megafunction                                ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/altshift.inc                                                     ;         ;
+; db/mult_7dt.tdf                                                                      ; yes             ; Auto-Generated Megafunction                 ; C:/Users/idec/Desktop/chohyunkeon/project/FPGA-SRAM-controller/workspace/quartus/db/mult_7dt.tdf                        ;         ;
++--------------------------------------------------------------------------------------+-----------------+---------------------------------------------+-------------------------------------------------------------------------------------------------------------------------+---------+
 
 
 +---------------------------------------------------------+
@@ -242,31 +246,31 @@ refer to the applicable agreement for further details.
 +---------------------------------------------+-----------+
 ; Resource                                    ; Usage     ;
 +---------------------------------------------+-----------+
-; Estimated Total logic elements              ; 14,861    ;
+; Estimated Total logic elements              ; 15,169    ;
 ;                                             ;           ;
-; Total combinational functions               ; 10722     ;
+; Total combinational functions               ; 10767     ;
 ; Logic element usage by number of LUT inputs ;           ;
-;     -- 4 input functions                    ; 7755      ;
-;     -- 3 input functions                    ; 1617      ;
-;     -- <=2 input functions                  ; 1350      ;
+;     -- 4 input functions                    ; 7925      ;
+;     -- 3 input functions                    ; 1649      ;
+;     -- <=2 input functions                  ; 1193      ;
 ;                                             ;           ;
 ; Logic elements by mode                      ;           ;
-;     -- normal mode                          ; 10506     ;
-;     -- arithmetic mode                      ; 216       ;
+;     -- normal mode                          ; 10532     ;
+;     -- arithmetic mode                      ; 235       ;
 ;                                             ;           ;
-; Total registers                             ; 5671      ;
-;     -- Dedicated logic registers            ; 5671      ;
+; Total registers                             ; 5746      ;
+;     -- Dedicated logic registers            ; 5746      ;
 ;     -- I/O registers                        ; 0         ;
 ;                                             ;           ;
-; I/O pins                                    ; 53        ;
+; I/O pins                                    ; 122       ;
 ; Total memory bits                           ; 159744    ;
 ;                                             ;           ;
 ; Embedded Multiplier 9-bit elements          ; 6         ;
 ;                                             ;           ;
 ; Maximum fan-out node                        ; CLK~input ;
-; Maximum fan-out                             ; 5588      ;
-; Total fan-out                               ; 55500     ;
-; Average fan-out                             ; 3.36      ;
+; Maximum fan-out                             ; 5663      ;
+; Total fan-out                               ; 56621     ;
+; Average fan-out                             ; 3.37      ;
 +---------------------------------------------+-----------+
 
 
@@ -275,16 +279,18 @@ refer to the applicable agreement for further details.
 +-------------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------+---------------------+--------------+
 ; Compilation Hierarchy Node                      ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                                                         ; Entity Name         ; Library Name ;
 +-------------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------+---------------------+--------------+
-; |AHBLITE_SYS                                    ; 10722 (3)           ; 5671 (5)                  ; 159744      ; 6            ; 0       ; 3         ; 53   ; 0            ; |AHBLITE_SYS                                                                                                                                                ; AHBLITE_SYS         ; work         ;
-;    |AHB2MEM:uAHB2MEM|                           ; 4060 (4060)         ; 4143 (4143)               ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AHBLITE_SYS|AHB2MEM:uAHB2MEM                                                                                                                               ; AHB2MEM             ; work         ;
-;    |AHBDCD:uAHBDCD|                             ; 17 (17)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AHBLITE_SYS|AHBDCD:uAHBDCD                                                                                                                                 ; AHBDCD              ; work         ;
-;    |AHBMUX:uAHBMUX|                             ; 30 (30)             ; 4 (4)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AHBLITE_SYS|AHBMUX:uAHBMUX                                                                                                                                 ; AHBMUX              ; work         ;
-;    |AHBVGA:uAHBVGA|                             ; 1229 (27)           ; 224 (44)                  ; 159744      ; 0            ; 0       ; 0         ; 0    ; 0            ; |AHBLITE_SYS|AHBVGA:uAHBVGA                                                                                                                                 ; AHBVGA              ; work         ;
+; |AHBLITE_SYS                                    ; 10767 (3)           ; 5746 (5)                  ; 159744      ; 6            ; 0       ; 3         ; 122  ; 0            ; |AHBLITE_SYS                                                                                                                                                ; AHBLITE_SYS         ; work         ;
+;    |AHB2MEM:uAHB2MEM|                           ; 3858 (3858)         ; 4143 (4143)               ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AHBLITE_SYS|AHB2MEM:uAHB2MEM                                                                                                                               ; AHB2MEM             ; work         ;
+;    |AHB2SRAM:uAHB2SRAM|                         ; 58 (58)             ; 42 (42)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AHBLITE_SYS|AHB2SRAM:uAHB2SRAM                                                                                                                             ; AHB2SRAM            ; work         ;
+;    |AHB7SEGDEC:uAHB7SEGDEC|                     ; 103 (103)           ; 39 (39)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AHBLITE_SYS|AHB7SEGDEC:uAHB7SEGDEC                                                                                                                         ; AHB7SEGDEC          ; work         ;
+;    |AHBDCD:uAHBDCD|                             ; 19 (19)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AHBLITE_SYS|AHBDCD:uAHBDCD                                                                                                                                 ; AHBDCD              ; work         ;
+;    |AHBMUX:uAHBMUX|                             ; 85 (85)             ; 4 (4)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AHBLITE_SYS|AHBMUX:uAHBMUX                                                                                                                                 ; AHBMUX              ; work         ;
+;    |AHBVGA:uAHBVGA|                             ; 1232 (27)           ; 218 (38)                  ; 159744      ; 0            ; 0       ; 0         ; 0    ; 0            ; |AHBLITE_SYS|AHBVGA:uAHBVGA                                                                                                                                 ; AHBVGA              ; work         ;
 ;       |VGAInterface:uVGAInterface|              ; 90 (56)             ; 51 (29)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AHBLITE_SYS|AHBVGA:uAHBVGA|VGAInterface:uVGAInterface                                                                                                      ; VGAInterface        ; work         ;
 ;          |GenericCounter:FreqDivider|           ; 1 (1)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AHBLITE_SYS|AHBVGA:uAHBVGA|VGAInterface:uVGAInterface|GenericCounter:FreqDivider                                                                           ; GenericCounter      ; work         ;
 ;          |GenericCounter:HorzAddrCounter|       ; 18 (18)             ; 11 (11)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AHBLITE_SYS|AHBVGA:uAHBVGA|VGAInterface:uVGAInterface|GenericCounter:HorzAddrCounter                                                                       ; GenericCounter      ; work         ;
 ;          |GenericCounter:VertAddrCounter|       ; 15 (15)             ; 10 (10)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AHBLITE_SYS|AHBVGA:uAHBVGA|VGAInterface:uVGAInterface|GenericCounter:VertAddrCounter                                                                       ; GenericCounter      ; work         ;
-;       |vga_console:uvga_console|                ; 1077 (1062)         ; 73 (32)                   ; 28672       ; 0            ; 0       ; 0         ; 0    ; 0            ; |AHBLITE_SYS|AHBVGA:uAHBVGA|vga_console:uvga_console                                                                                                        ; vga_console         ; work         ;
+;       |vga_console:uvga_console|                ; 1080 (1065)         ; 73 (32)                   ; 28672       ; 0            ; 0       ; 0         ; 0    ; 0            ; |AHBLITE_SYS|AHBVGA:uAHBVGA|vga_console:uvga_console                                                                                                        ; vga_console         ; work         ;
 ;          |dual_port_ram_sync:uvideo_ram|        ; 15 (15)             ; 32 (32)                   ; 28672       ; 0            ; 0       ; 0         ; 0    ; 0            ; |AHBLITE_SYS|AHBVGA:uAHBVGA|vga_console:uvga_console|dual_port_ram_sync:uvideo_ram                                                                          ; dual_port_ram_sync  ; work         ;
 ;             |altsyncram:ram_rtl_0|              ; 0 (0)               ; 0 (0)                     ; 28672       ; 0            ; 0       ; 0         ; 0    ; 0            ; |AHBLITE_SYS|AHBVGA:uAHBVGA|vga_console:uvga_console|dual_port_ram_sync:uvideo_ram|altsyncram:ram_rtl_0                                                     ; altsyncram          ; work         ;
 ;                |altsyncram_mql1:auto_generated| ; 0 (0)               ; 0 (0)                     ; 28672       ; 0            ; 0       ; 0         ; 0    ; 0            ; |AHBLITE_SYS|AHBVGA:uAHBVGA|vga_console:uvga_console|dual_port_ram_sync:uvideo_ram|altsyncram:ram_rtl_0|altsyncram_mql1:auto_generated                      ; altsyncram_mql1     ; work         ;
@@ -295,8 +301,8 @@ refer to the applicable agreement for further details.
 ;                |altsyncram_cul1:auto_generated| ; 4 (0)               ; 1 (1)                     ; 131072      ; 0            ; 0       ; 0         ; 0    ; 0            ; |AHBLITE_SYS|AHBVGA:uAHBVGA|vga_image:uvga_image|dual_port_ram_sync:uimage_ram|altsyncram:ram_rtl_0|altsyncram_cul1:auto_generated                          ; altsyncram_cul1     ; work         ;
 ;                   |decode_f8a:rden_decode_a|    ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AHBLITE_SYS|AHBVGA:uAHBVGA|vga_image:uvga_image|dual_port_ram_sync:uimage_ram|altsyncram:ram_rtl_0|altsyncram_cul1:auto_generated|decode_f8a:rden_decode_a ; decode_f8a          ; work         ;
 ;                   |decode_msa:decode2|          ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |AHBLITE_SYS|AHBVGA:uAHBVGA|vga_image:uvga_image|dual_port_ram_sync:uimage_ram|altsyncram:ram_rtl_0|altsyncram_cul1:auto_generated|decode_msa:decode2       ; decode_msa          ; work         ;
-;    |CORTEXM0INTEGRATION:u_CORTEXM0INTEGRATION|  ; 5383 (0)            ; 1295 (0)                  ; 0           ; 6            ; 0       ; 3         ; 0    ; 0            ; |AHBLITE_SYS|CORTEXM0INTEGRATION:u_CORTEXM0INTEGRATION                                                                                                      ; CORTEXM0INTEGRATION ; work         ;
-;       |cortexm0ds_logic:u_logic|                ; 5383 (5355)         ; 1295 (1295)               ; 0           ; 6            ; 0       ; 3         ; 0    ; 0            ; |AHBLITE_SYS|CORTEXM0INTEGRATION:u_CORTEXM0INTEGRATION|cortexm0ds_logic:u_logic                                                                             ; cortexm0ds_logic    ; work         ;
+;    |CORTEXM0INTEGRATION:u_CORTEXM0INTEGRATION|  ; 5409 (0)            ; 1295 (0)                  ; 0           ; 6            ; 0       ; 3         ; 0    ; 0            ; |AHBLITE_SYS|CORTEXM0INTEGRATION:u_CORTEXM0INTEGRATION                                                                                                      ; CORTEXM0INTEGRATION ; work         ;
+;       |cortexm0ds_logic:u_logic|                ; 5409 (5381)         ; 1295 (1295)               ; 0           ; 6            ; 0       ; 3         ; 0    ; 0            ; |AHBLITE_SYS|CORTEXM0INTEGRATION:u_CORTEXM0INTEGRATION|cortexm0ds_logic:u_logic                                                                             ; cortexm0ds_logic    ; work         ;
 ;          |lpm_mult:Mult0|                       ; 28 (0)              ; 0 (0)                     ; 0           ; 6            ; 0       ; 3         ; 0    ; 0            ; |AHBLITE_SYS|CORTEXM0INTEGRATION:u_CORTEXM0INTEGRATION|cortexm0ds_logic:u_logic|lpm_mult:Mult0                                                              ; lpm_mult            ; work         ;
 ;             |mult_7dt:auto_generated|           ; 28 (28)             ; 0 (0)                     ; 0           ; 6            ; 0       ; 3         ; 0    ; 0            ; |AHBLITE_SYS|CORTEXM0INTEGRATION:u_CORTEXM0INTEGRATION|cortexm0ds_logic:u_logic|lpm_mult:Mult0|mult_7dt:auto_generated                                      ; mult_7dt            ; work         ;
 +-------------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------+---------------------+--------------+
@@ -336,6 +342,7 @@ Note: number of Embedded Multiplier Blocks used is only available after a succes
 +----------------------------------------------------------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------------+
 ; Register name                                                                                                                          ; Reason for Removal                                                                          ;
 +----------------------------------------------------------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------------+
+; AHB2SRAM:uAHB2SRAM|aphase_addr[31]                                                                                                     ; Stuck at GND due to stuck port data_in                                                      ;
 ; AHBVGA:uAHBVGA|vga_image:uvga_image|dual_port_ram_sync:uimage_ram|addr_b_reg[14]                                                       ; Stuck at GND due to stuck port data_in                                                      ;
 ; CORTEXM0INTEGRATION:u_CORTEXM0INTEGRATION|cortexm0ds_logic:u_logic|Lp7ax6                                                              ; Lost fanout                                                                                 ;
 ; CORTEXM0INTEGRATION:u_CORTEXM0INTEGRATION|cortexm0ds_logic:u_logic|A3ipw6                                                              ; Stuck at GND due to stuck port data_in                                                      ;
@@ -372,15 +379,22 @@ Note: number of Embedded Multiplier Blocks used is only available after a succes
 ; CORTEXM0INTEGRATION:u_CORTEXM0INTEGRATION|cortexm0ds_logic:u_logic|Y72bx6                                                              ; Lost fanout                                                                                 ;
 ; CORTEXM0INTEGRATION:u_CORTEXM0INTEGRATION|cortexm0ds_logic:u_logic|Gv1bx6                                                              ; Lost fanout                                                                                 ;
 ; CORTEXM0INTEGRATION:u_CORTEXM0INTEGRATION|cortexm0ds_logic:u_logic|Qaipw6                                                              ; Lost fanout                                                                                 ;
+; AHB2SRAM:uAHB2SRAM|aphase_addr[20..30]                                                                                                 ; Lost fanout                                                                                 ;
+; AHBVGA:uAHBVGA|last_HTRANS[1]                                                                                                          ; Merged with AHB7SEGDEC:uAHB7SEGDEC|last_HTRANS[1]                                           ;
 ; AHBVGA:uAHBVGA|vga_console:uvga_console|font_rom:ufont_rom|addr_reg[2]                                                                 ; Merged with AHBVGA:uAHBVGA|vga_image:uvga_image|dual_port_ram_sync:uimage_ram|addr_b_reg[7] ;
 ; AHBVGA:uAHBVGA|vga_console:uvga_console|font_rom:ufont_rom|addr_reg[3]                                                                 ; Merged with AHBVGA:uAHBVGA|vga_image:uvga_image|dual_port_ram_sync:uimage_ram|addr_b_reg[8] ;
 ; AHBVGA:uAHBVGA|VGAInterface:uVGAInterface|GenericCounter:FreqDivider|counter[0]                                                        ; Merged with AHBVGA:uAHBVGA|VGAInterface:uVGAInterface|GenericCounter:FreqDivider|triggerout ;
+; AHBVGA:uAHBVGA|last_HWRITE                                                                                                             ; Merged with AHB7SEGDEC:uAHB7SEGDEC|last_HWRITE                                              ;
+; AHBVGA:uAHBVGA|last_HADDR[3]                                                                                                           ; Merged with AHB7SEGDEC:uAHB7SEGDEC|last_HADDR[3]                                            ;
+; AHBVGA:uAHBVGA|last_HADDR[2]                                                                                                           ; Merged with AHB7SEGDEC:uAHB7SEGDEC|last_HADDR[2]                                            ;
+; AHBVGA:uAHBVGA|last_HADDR[1]                                                                                                           ; Merged with AHB7SEGDEC:uAHB7SEGDEC|last_HADDR[1]                                            ;
+; AHBVGA:uAHBVGA|last_HADDR[0]                                                                                                           ; Merged with AHB7SEGDEC:uAHB7SEGDEC|last_HADDR[0]                                            ;
 ; CORTEXM0INTEGRATION:u_CORTEXM0INTEGRATION|cortexm0ds_logic:u_logic|Hmbax6                                                              ; Stuck at GND due to stuck port data_in                                                      ;
 ; AHBVGA:uAHBVGA|vga_image:uvga_image|dual_port_ram_sync:uimage_ram|ram_rtl_0_bypass[30]                                                 ; Stuck at GND due to stuck port data_in                                                      ;
 ; CORTEXM0INTEGRATION:u_CORTEXM0INTEGRATION|cortexm0ds_logic:u_logic|Xbopw6                                                              ; Stuck at VCC due to stuck port data_in                                                      ;
 ; CORTEXM0INTEGRATION:u_CORTEXM0INTEGRATION|cortexm0ds_logic:u_logic|K7vpw6                                                              ; Stuck at VCC due to stuck port data_in                                                      ;
 ; AHBVGA:uAHBVGA|vga_image:uvga_image|dual_port_ram_sync:uimage_ram|altsyncram:ram_rtl_0|altsyncram_cul1:auto_generated|address_reg_b[1] ; Stuck at GND due to stuck port data_in                                                      ;
-; Total Number of Removed Registers = 44                                                                                                 ;                                                                                             ;
+; Total Number of Removed Registers = 62                                                                                                 ;                                                                                             ;
 +----------------------------------------------------------------------------------------------------------------------------------------+---------------------------------------------------------------------------------------------+
 
 
@@ -389,12 +403,12 @@ Note: number of Embedded Multiplier Blocks used is only available after a succes
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 5671  ;
+; Total registers                              ; 5746  ;
 ; Number of registers using Synchronous Clear  ; 15    ;
 ; Number of registers using Synchronous Load   ; 10    ;
-; Number of registers using Asynchronous Clear ; 387   ;
+; Number of registers using Asynchronous Clear ; 461   ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 5117  ;
+; Number of registers using Clock Enable       ; 5189  ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
@@ -404,33 +418,35 @@ Note: number of Embedded Multiplier Blocks used is only available after a succes
 +---------------------------------------------------------------------------+---------+
 ; Inverted Register                                                         ; Fan out ;
 +---------------------------------------------------------------------------+---------+
-; CORTEXM0INTEGRATION:u_CORTEXM0INTEGRATION|cortexm0ds_logic:u_logic|Kalpw6 ; 23      ;
-; CORTEXM0INTEGRATION:u_CORTEXM0INTEGRATION|cortexm0ds_logic:u_logic|Ahlpw6 ; 25      ;
-; CORTEXM0INTEGRATION:u_CORTEXM0INTEGRATION|cortexm0ds_logic:u_logic|Rilpw6 ; 24      ;
-; CORTEXM0INTEGRATION:u_CORTEXM0INTEGRATION|cortexm0ds_logic:u_logic|Sdlpw6 ; 32      ;
-; CORTEXM0INTEGRATION:u_CORTEXM0INTEGRATION|cortexm0ds_logic:u_logic|P5vpw6 ; 123     ;
-; CORTEXM0INTEGRATION:u_CORTEXM0INTEGRATION|cortexm0ds_logic:u_logic|U9ypw6 ; 63      ;
-; CORTEXM0INTEGRATION:u_CORTEXM0INTEGRATION|cortexm0ds_logic:u_logic|Hgrpw6 ; 22      ;
-; CORTEXM0INTEGRATION:u_CORTEXM0INTEGRATION|cortexm0ds_logic:u_logic|Dxvpw6 ; 67      ;
-; CORTEXM0INTEGRATION:u_CORTEXM0INTEGRATION|cortexm0ds_logic:u_logic|Skjax6 ; 57      ;
+; AHB2SRAM:uAHB2SRAM|cstate[0]                                              ; 9       ;
+; AHB7SEGDEC:uAHB7SEGDEC|DIGIT1[0]                                          ; 11      ;
+; AHB7SEGDEC:uAHB7SEGDEC|DIGIT1[2]                                          ; 12      ;
+; AHB7SEGDEC:uAHB7SEGDEC|DIGIT2[3]                                          ; 15      ;
+; AHB7SEGDEC:uAHB7SEGDEC|DIGIT2[2]                                          ; 13      ;
+; AHB7SEGDEC:uAHB7SEGDEC|DIGIT2[1]                                          ; 12      ;
+; AHB7SEGDEC:uAHB7SEGDEC|DIGIT4[0]                                          ; 12      ;
+; CORTEXM0INTEGRATION:u_CORTEXM0INTEGRATION|cortexm0ds_logic:u_logic|P5vpw6 ; 122     ;
+; CORTEXM0INTEGRATION:u_CORTEXM0INTEGRATION|cortexm0ds_logic:u_logic|U9ypw6 ; 56      ;
+; CORTEXM0INTEGRATION:u_CORTEXM0INTEGRATION|cortexm0ds_logic:u_logic|Hgrpw6 ; 21      ;
+; CORTEXM0INTEGRATION:u_CORTEXM0INTEGRATION|cortexm0ds_logic:u_logic|Dxvpw6 ; 70      ;
+; CORTEXM0INTEGRATION:u_CORTEXM0INTEGRATION|cortexm0ds_logic:u_logic|Skjax6 ; 51      ;
 ; CORTEXM0INTEGRATION:u_CORTEXM0INTEGRATION|cortexm0ds_logic:u_logic|N4kax6 ; 44      ;
 ; CORTEXM0INTEGRATION:u_CORTEXM0INTEGRATION|cortexm0ds_logic:u_logic|Jgxpw6 ; 17      ;
-; CORTEXM0INTEGRATION:u_CORTEXM0INTEGRATION|cortexm0ds_logic:u_logic|Jckax6 ; 19      ;
-; CORTEXM0INTEGRATION:u_CORTEXM0INTEGRATION|cortexm0ds_logic:u_logic|W4jax6 ; 36      ;
-; CORTEXM0INTEGRATION:u_CORTEXM0INTEGRATION|cortexm0ds_logic:u_logic|Lerpw6 ; 15      ;
+; CORTEXM0INTEGRATION:u_CORTEXM0INTEGRATION|cortexm0ds_logic:u_logic|Jckax6 ; 20      ;
+; CORTEXM0INTEGRATION:u_CORTEXM0INTEGRATION|cortexm0ds_logic:u_logic|W4jax6 ; 37      ;
+; CORTEXM0INTEGRATION:u_CORTEXM0INTEGRATION|cortexm0ds_logic:u_logic|Lerpw6 ; 16      ;
+; CORTEXM0INTEGRATION:u_CORTEXM0INTEGRATION|cortexm0ds_logic:u_logic|L6lax6 ; 8       ;
 ; CORTEXM0INTEGRATION:u_CORTEXM0INTEGRATION|cortexm0ds_logic:u_logic|J0iax6 ; 6       ;
-; CORTEXM0INTEGRATION:u_CORTEXM0INTEGRATION|cortexm0ds_logic:u_logic|L6lax6 ; 7       ;
 ; CORTEXM0INTEGRATION:u_CORTEXM0INTEGRATION|cortexm0ds_logic:u_logic|Lqjpw6 ; 8       ;
 ; CORTEXM0INTEGRATION:u_CORTEXM0INTEGRATION|cortexm0ds_logic:u_logic|Awupw6 ; 8       ;
 ; CORTEXM0INTEGRATION:u_CORTEXM0INTEGRATION|cortexm0ds_logic:u_logic|D12qw6 ; 8       ;
 ; CORTEXM0INTEGRATION:u_CORTEXM0INTEGRATION|cortexm0ds_logic:u_logic|A32qw6 ; 8       ;
 ; CORTEXM0INTEGRATION:u_CORTEXM0INTEGRATION|cortexm0ds_logic:u_logic|Pcrpw6 ; 48      ;
-; CORTEXM0INTEGRATION:u_CORTEXM0INTEGRATION|cortexm0ds_logic:u_logic|Eliax6 ; 46      ;
+; CORTEXM0INTEGRATION:u_CORTEXM0INTEGRATION|cortexm0ds_logic:u_logic|Eliax6 ; 45      ;
 ; CORTEXM0INTEGRATION:u_CORTEXM0INTEGRATION|cortexm0ds_logic:u_logic|Rwhax6 ; 9       ;
-; CORTEXM0INTEGRATION:u_CORTEXM0INTEGRATION|cortexm0ds_logic:u_logic|Fnnpw6 ; 6       ;
+; CORTEXM0INTEGRATION:u_CORTEXM0INTEGRATION|cortexm0ds_logic:u_logic|Fnnpw6 ; 4       ;
 ; CORTEXM0INTEGRATION:u_CORTEXM0INTEGRATION|cortexm0ds_logic:u_logic|Jxgax6 ; 1       ;
-; CORTEXM0INTEGRATION:u_CORTEXM0INTEGRATION|cortexm0ds_logic:u_logic|U0hax6 ; 7       ;
-; CORTEXM0INTEGRATION:u_CORTEXM0INTEGRATION|cortexm0ds_logic:u_logic|R2hax6 ; 7       ;
+; CORTEXM0INTEGRATION:u_CORTEXM0INTEGRATION|cortexm0ds_logic:u_logic|Wfspw6 ; 17      ;
 ; CORTEXM0INTEGRATION:u_CORTEXM0INTEGRATION|cortexm0ds_logic:u_logic|O4hax6 ; 7       ;
 ; CORTEXM0INTEGRATION:u_CORTEXM0INTEGRATION|cortexm0ds_logic:u_logic|L6hax6 ; 7       ;
 ; CORTEXM0INTEGRATION:u_CORTEXM0INTEGRATION|cortexm0ds_logic:u_logic|C37ax6 ; 7       ;
@@ -454,57 +470,55 @@ Note: number of Embedded Multiplier Blocks used is only available after a succes
 ; CORTEXM0INTEGRATION:u_CORTEXM0INTEGRATION|cortexm0ds_logic:u_logic|Zshax6 ; 7       ;
 ; CORTEXM0INTEGRATION:u_CORTEXM0INTEGRATION|cortexm0ds_logic:u_logic|Vuhax6 ; 7       ;
 ; CORTEXM0INTEGRATION:u_CORTEXM0INTEGRATION|cortexm0ds_logic:u_logic|Nyhax6 ; 11      ;
-; CORTEXM0INTEGRATION:u_CORTEXM0INTEGRATION|cortexm0ds_logic:u_logic|P14qw6 ; 55      ;
+; CORTEXM0INTEGRATION:u_CORTEXM0INTEGRATION|cortexm0ds_logic:u_logic|P14qw6 ; 57      ;
 ; CORTEXM0INTEGRATION:u_CORTEXM0INTEGRATION|cortexm0ds_logic:u_logic|Sojax6 ; 59      ;
-; CORTEXM0INTEGRATION:u_CORTEXM0INTEGRATION|cortexm0ds_logic:u_logic|Ssjax6 ; 63      ;
-; CORTEXM0INTEGRATION:u_CORTEXM0INTEGRATION|cortexm0ds_logic:u_logic|Rwjax6 ; 55      ;
-; CORTEXM0INTEGRATION:u_CORTEXM0INTEGRATION|cortexm0ds_logic:u_logic|P0kax6 ; 57      ;
+; CORTEXM0INTEGRATION:u_CORTEXM0INTEGRATION|cortexm0ds_logic:u_logic|Ssjax6 ; 64      ;
+; CORTEXM0INTEGRATION:u_CORTEXM0INTEGRATION|cortexm0ds_logic:u_logic|Rwjax6 ; 52      ;
+; CORTEXM0INTEGRATION:u_CORTEXM0INTEGRATION|cortexm0ds_logic:u_logic|P0kax6 ; 53      ;
 ; CORTEXM0INTEGRATION:u_CORTEXM0INTEGRATION|cortexm0ds_logic:u_logic|Wkipw6 ; 30      ;
 ; CORTEXM0INTEGRATION:u_CORTEXM0INTEGRATION|cortexm0ds_logic:u_logic|Irmpw6 ; 14      ;
-; CORTEXM0INTEGRATION:u_CORTEXM0INTEGRATION|cortexm0ds_logic:u_logic|S7mpw6 ; 15      ;
-; CORTEXM0INTEGRATION:u_CORTEXM0INTEGRATION|cortexm0ds_logic:u_logic|Wfspw6 ; 16      ;
-; CORTEXM0INTEGRATION:u_CORTEXM0INTEGRATION|cortexm0ds_logic:u_logic|F26bx6 ; 3       ;
+; CORTEXM0INTEGRATION:u_CORTEXM0INTEGRATION|cortexm0ds_logic:u_logic|S7mpw6 ; 16      ;
+; CORTEXM0INTEGRATION:u_CORTEXM0INTEGRATION|cortexm0ds_logic:u_logic|U0hax6 ; 8       ;
+; CORTEXM0INTEGRATION:u_CORTEXM0INTEGRATION|cortexm0ds_logic:u_logic|R2hax6 ; 7       ;
+; CORTEXM0INTEGRATION:u_CORTEXM0INTEGRATION|cortexm0ds_logic:u_logic|Sdlpw6 ; 26      ;
+; CORTEXM0INTEGRATION:u_CORTEXM0INTEGRATION|cortexm0ds_logic:u_logic|Ahlpw6 ; 25      ;
+; CORTEXM0INTEGRATION:u_CORTEXM0INTEGRATION|cortexm0ds_logic:u_logic|Kalpw6 ; 25      ;
+; CORTEXM0INTEGRATION:u_CORTEXM0INTEGRATION|cortexm0ds_logic:u_logic|Rilpw6 ; 23      ;
 ; CORTEXM0INTEGRATION:u_CORTEXM0INTEGRATION|cortexm0ds_logic:u_logic|Arnpw6 ; 3       ;
 ; CORTEXM0INTEGRATION:u_CORTEXM0INTEGRATION|cortexm0ds_logic:u_logic|Bfjpw6 ; 3       ;
-; CORTEXM0INTEGRATION:u_CORTEXM0INTEGRATION|cortexm0ds_logic:u_logic|Pzkpw6 ; 8       ;
-; CORTEXM0INTEGRATION:u_CORTEXM0INTEGRATION|cortexm0ds_logic:u_logic|Sz3qw6 ; 6       ;
-; CORTEXM0INTEGRATION:u_CORTEXM0INTEGRATION|cortexm0ds_logic:u_logic|L4lax6 ; 1       ;
+; CORTEXM0INTEGRATION:u_CORTEXM0INTEGRATION|cortexm0ds_logic:u_logic|F26bx6 ; 3       ;
+; CORTEXM0INTEGRATION:u_CORTEXM0INTEGRATION|cortexm0ds_logic:u_logic|Sz3qw6 ; 20      ;
+; CORTEXM0INTEGRATION:u_CORTEXM0INTEGRATION|cortexm0ds_logic:u_logic|Pzkpw6 ; 22      ;
 ; CORTEXM0INTEGRATION:u_CORTEXM0INTEGRATION|cortexm0ds_logic:u_logic|Tajax6 ; 1       ;
-; AHB2MEM:uAHB2MEM|memory[32][2]                                            ; 1       ;
-; AHB2MEM:uAHB2MEM|memory[37][2]                                            ; 1       ;
-; AHB2MEM:uAHB2MEM|memory[0][2]                                             ; 1       ;
-; AHB2MEM:uAHB2MEM|memory[34][2]                                            ; 1       ;
-; AHB2MEM:uAHB2MEM|memory[33][18]                                           ; 1       ;
-; AHB2MEM:uAHB2MEM|memory[32][18]                                           ; 1       ;
-; AHB2MEM:uAHB2MEM|memory[1][7]                                             ; 1       ;
-; AHB2MEM:uAHB2MEM|memory[0][7]                                             ; 1       ;
-; AHB2MEM:uAHB2MEM|memory[35][1]                                            ; 1       ;
-; AHB2MEM:uAHB2MEM|memory[35][17]                                           ; 1       ;
-; AHB2MEM:uAHB2MEM|memory[32][11]                                           ; 1       ;
-; AHB2MEM:uAHB2MEM|memory[35][11]                                           ; 1       ;
-; AHB2MEM:uAHB2MEM|memory[36][3]                                            ; 1       ;
-; AHB2MEM:uAHB2MEM|memory[33][3]                                            ; 1       ;
-; AHB2MEM:uAHB2MEM|memory[0][3]                                             ; 1       ;
-; AHB2MEM:uAHB2MEM|memory[37][19]                                           ; 1       ;
-; AHB2MEM:uAHB2MEM|memory[34][19]                                           ; 1       ;
-; AHB2MEM:uAHB2MEM|memory[36][27]                                           ; 1       ;
-; AHB2MEM:uAHB2MEM|memory[33][27]                                           ; 1       ;
-; AHB2MEM:uAHB2MEM|memory[35][20]                                           ; 1       ;
-; AHB2MEM:uAHB2MEM|memory[32][20]                                           ; 1       ;
-; AHB2MEM:uAHB2MEM|memory[0][4]                                             ; 1       ;
-; AHB2MEM:uAHB2MEM|memory[37][4]                                            ; 1       ;
-; AHB2MEM:uAHB2MEM|memory[38][28]                                           ; 1       ;
-; AHB2MEM:uAHB2MEM|memory[32][22]                                           ; 1       ;
-; AHB2MEM:uAHB2MEM|memory[35][22]                                           ; 1       ;
-; AHB2MEM:uAHB2MEM|memory[37][6]                                            ; 1       ;
-; AHB2MEM:uAHB2MEM|memory[0][6]                                             ; 1       ;
-; AHB2MEM:uAHB2MEM|memory[34][6]                                            ; 1       ;
+; CORTEXM0INTEGRATION:u_CORTEXM0INTEGRATION|cortexm0ds_logic:u_logic|L4lax6 ; 1       ;
+; AHB2MEM:uAHB2MEM|memory[45][31]                                           ; 1       ;
+; AHB2MEM:uAHB2MEM|memory[40][31]                                           ; 1       ;
+; AHB2MEM:uAHB2MEM|memory[47][31]                                           ; 1       ;
+; AHB2MEM:uAHB2MEM|memory[44][15]                                           ; 1       ;
+; AHB2MEM:uAHB2MEM|memory[52][30]                                           ; 1       ;
+; AHB2MEM:uAHB2MEM|memory[48][30]                                           ; 1       ;
+; AHB2MEM:uAHB2MEM|memory[53][30]                                           ; 1       ;
+; AHB2MEM:uAHB2MEM|memory[54][30]                                           ; 1       ;
+; AHB2MEM:uAHB2MEM|memory[51][30]                                           ; 1       ;
+; AHB2MEM:uAHB2MEM|memory[50][30]                                           ; 1       ;
+; AHB2MEM:uAHB2MEM|memory[55][30]                                           ; 1       ;
+; AHB2MEM:uAHB2MEM|memory[43][30]                                           ; 1       ;
+; AHB2MEM:uAHB2MEM|memory[45][30]                                           ; 1       ;
+; AHB2MEM:uAHB2MEM|memory[40][30]                                           ; 1       ;
+; AHB2MEM:uAHB2MEM|memory[41][30]                                           ; 1       ;
+; AHB2MEM:uAHB2MEM|memory[46][30]                                           ; 1       ;
+; AHB2MEM:uAHB2MEM|memory[47][30]                                           ; 1       ;
 ; AHB2MEM:uAHB2MEM|memory[36][30]                                           ; 1       ;
-; AHB2MEM:uAHB2MEM|memory[38][30]                                           ; 1       ;
 ; AHB2MEM:uAHB2MEM|memory[33][30]                                           ; 1       ;
-; AHB2MEM:uAHB2MEM|memory[34][30]                                           ; 1       ;
+; AHB2MEM:uAHB2MEM|memory[32][30]                                           ; 1       ;
 ; AHB2MEM:uAHB2MEM|memory[37][30]                                           ; 1       ;
-; Total number of inverted registers = 124*                                 ;         ;
+; AHB2MEM:uAHB2MEM|memory[38][30]                                           ; 1       ;
+; AHB2MEM:uAHB2MEM|memory[35][30]                                           ; 1       ;
+; AHB2MEM:uAHB2MEM|memory[34][30]                                           ; 1       ;
+; AHB2MEM:uAHB2MEM|memory[39][30]                                           ; 1       ;
+; AHB2MEM:uAHB2MEM|memory[44][14]                                           ; 1       ;
+; AHB2MEM:uAHB2MEM|memory[36][14]                                           ; 1       ;
+; Total number of inverted registers = 315*                                 ;         ;
 +---------------------------------------------------------------------------+---------+
 * Table truncated at 100 items. To change the number of inverted registers reported, set the "Number of Inverted Registers Reported" option under Assignments->Settings->Analysis and Synthesis Settings->More Settings
 
@@ -605,13 +619,16 @@ Note: number of Embedded Multiplier Blocks used is only available after a succes
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                        ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------------------------+
-; 3:1                ; 5 bits    ; 10 LEs        ; 5 LEs                ; 5 LEs                  ; Yes        ; |AHBLITE_SYS|AHBVGA:uAHBVGA|vga_console:uvga_console|yn[1]        ;
-; 3:1                ; 7 bits    ; 14 LEs        ; 7 LEs                ; 7 LEs                  ; Yes        ; |AHBLITE_SYS|AHBVGA:uAHBVGA|vga_console:uvga_console|cur_x_reg[6] ;
-; 5:1                ; 5 bits    ; 15 LEs        ; 10 LEs               ; 5 LEs                  ; Yes        ; |AHBLITE_SYS|AHBVGA:uAHBVGA|VGAInterface:uVGAInterface|cout[1]    ;
-; 5:1                ; 3 bits    ; 9 LEs         ; 6 LEs                ; 3 LEs                  ; Yes        ; |AHBLITE_SYS|AHBVGA:uAHBVGA|VGAInterface:uVGAInterface|cout[2]    ;
+; 3:1                ; 5 bits    ; 10 LEs        ; 5 LEs                ; 5 LEs                  ; Yes        ; |AHBLITE_SYS|AHBVGA:uAHBVGA|vga_console:uvga_console|yn[4]        ;
+; 3:1                ; 7 bits    ; 14 LEs        ; 7 LEs                ; 7 LEs                  ; Yes        ; |AHBLITE_SYS|AHBVGA:uAHBVGA|vga_console:uvga_console|cur_x_reg[1] ;
+; 4:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; Yes        ; |AHBLITE_SYS|AHB2SRAM:uAHB2SRAM|dphase_cnt[0]                     ;
+; 5:1                ; 5 bits    ; 15 LEs        ; 10 LEs               ; 5 LEs                  ; Yes        ; |AHBLITE_SYS|AHBVGA:uAHBVGA|VGAInterface:uVGAInterface|cout[5]    ;
+; 5:1                ; 3 bits    ; 9 LEs         ; 6 LEs                ; 3 LEs                  ; Yes        ; |AHBLITE_SYS|AHBVGA:uAHBVGA|VGAInterface:uVGAInterface|cout[4]    ;
+; 6:1                ; 2 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |AHBLITE_SYS|AHB2SRAM:uAHB2SRAM|cstate[1]                         ;
 ; 128:1              ; 32 bits   ; 2720 LEs      ; 2720 LEs             ; 0 LEs                  ; Yes        ; |AHBLITE_SYS|AHB2MEM:uAHB2MEM|HRDATA[24]                          ;
-; 4:1                ; 7 bits    ; 14 LEs        ; 14 LEs               ; 0 LEs                  ; No         ; |AHBLITE_SYS|AHBVGA:uAHBVGA|vga_console:uvga_console|xn_next[2]   ;
-; 16:1               ; 24 bits   ; 240 LEs       ; 72 LEs               ; 168 LEs                ; No         ; |AHBLITE_SYS|AHBMUX:uAHBMUX|Mux10                                 ;
+; 4:1                ; 7 bits    ; 14 LEs        ; 14 LEs               ; 0 LEs                  ; No         ; |AHBLITE_SYS|AHBVGA:uAHBVGA|vga_console:uvga_console|xn_next[3]   ;
+; 16:1               ; 24 bits   ; 240 LEs       ; 96 LEs               ; 144 LEs                ; No         ; |AHBLITE_SYS|AHBMUX:uAHBMUX|Mux20                                 ;
+; 20:1               ; 8 bits    ; 104 LEs       ; 56 LEs               ; 48 LEs                 ; No         ; |AHBLITE_SYS|AHBMUX:uAHBMUX|Mux25                                 ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------------------------+
 
 
@@ -712,6 +729,34 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; ADDR_WIDTH     ; 15    ; Signed Integer                                                                        ;
 ; DATA_WIDTH     ; 8     ; Signed Integer                                                                        ;
 +----------------+-------+---------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: AHB2SRAM:uAHB2SRAM     ;
++----------------+----------------------------------+-----------------+
+; Parameter Name ; Value                            ; Type            ;
++----------------+----------------------------------+-----------------+
+; MEM_DEPTH      ; 20                               ; Signed Integer  ;
+; DATA_BITWIDTH  ; 16                               ; Signed Integer  ;
+; BASE_ADDR      ; 01010001000000000000000000000000 ; Unsigned Binary ;
++----------------+----------------------------------+-----------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: AHB7SEGDEC:uAHB7SEGDEC ;
++----------------+---------+------------------------------------------+
+; Parameter Name ; Value   ; Type                                     ;
++----------------+---------+------------------------------------------+
+; A              ; 0000001 ; Unsigned Binary                          ;
+; B              ; 0000010 ; Unsigned Binary                          ;
+; C              ; 0000100 ; Unsigned Binary                          ;
+; D              ; 0001000 ; Unsigned Binary                          ;
+; E              ; 0010000 ; Unsigned Binary                          ;
+; F              ; 0100000 ; Unsigned Binary                          ;
+; G              ; 1000000 ; Unsigned Binary                          ;
++----------------+---------+------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
@@ -987,8 +1032,6 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------------+-------+----------+--------------+
 ; Port                 ; Type  ; Severity ; Details      ;
 +----------------------+-------+----------+--------------+
-; HRDATA_S2            ; Input ; Info     ; Stuck at GND ;
-; HRDATA_S3            ; Input ; Info     ; Stuck at GND ;
 ; HRDATA_S4            ; Input ; Info     ; Stuck at GND ;
 ; HRDATA_S5            ; Input ; Info     ; Stuck at GND ;
 ; HRDATA_S6            ; Input ; Info     ; Stuck at GND ;
@@ -1012,8 +1055,6 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; HRDATA_NOMAP[14]     ; Input ; Info     ; Stuck at GND ;
 ; HRDATA_NOMAP[8]      ; Input ; Info     ; Stuck at GND ;
 ; HRDATA_NOMAP[4]      ; Input ; Info     ; Stuck at GND ;
-; HREADYOUT_S2         ; Input ; Info     ; Stuck at VCC ;
-; HREADYOUT_S3         ; Input ; Info     ; Stuck at VCC ;
 ; HREADYOUT_S4         ; Input ; Info     ; Stuck at VCC ;
 ; HREADYOUT_S5         ; Input ; Info     ; Stuck at VCC ;
 ; HREADYOUT_S6         ; Input ; Info     ; Stuck at VCC ;
@@ -1029,8 +1070,6 @@ Note: In order to hide this table in the UI and the text report file, please set
 +------------+--------+----------+------------------------+
 ; Port       ; Type   ; Severity ; Details                ;
 +------------+--------+----------+------------------------+
-; HSEL_S2    ; Output ; Info     ; Explicitly unconnected ;
-; HSEL_S3    ; Output ; Info     ; Explicitly unconnected ;
 ; HSEL_S4    ; Output ; Info     ; Explicitly unconnected ;
 ; HSEL_S5    ; Output ; Info     ; Explicitly unconnected ;
 ; HSEL_S6    ; Output ; Info     ; Explicitly unconnected ;
@@ -1116,31 +1155,31 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; boundary_port         ; 53                          ;
-; cycloneiii_ff         ; 5671                        ;
-;     CLR               ; 238                         ;
-;     ENA               ; 4968                        ;
-;     ENA CLR           ; 149                         ;
+; boundary_port         ; 122                         ;
+; cycloneiii_ff         ; 5746                        ;
+;     CLR               ; 241                         ;
+;     ENA               ; 4969                        ;
+;     ENA CLR           ; 220                         ;
 ;     SCLR              ; 15                          ;
 ;     SLD               ; 10                          ;
 ;     plain             ; 291                         ;
-; cycloneiii_io_obuf    ; 1                           ;
-; cycloneiii_lcell_comb ; 10722                       ;
-;     arith             ; 216                         ;
-;         2 data inputs ; 138                         ;
-;         3 data inputs ; 78                          ;
-;     normal            ; 10506                       ;
+; cycloneiii_io_obuf    ; 17                          ;
+; cycloneiii_lcell_comb ; 10793                       ;
+;     arith             ; 235                         ;
+;         2 data inputs ; 156                         ;
+;         3 data inputs ; 79                          ;
+;     normal            ; 10558                       ;
 ;         0 data inputs ; 3                           ;
-;         1 data inputs ; 823                         ;
-;         2 data inputs ; 386                         ;
-;         3 data inputs ; 1539                        ;
-;         4 data inputs ; 7755                        ;
+;         1 data inputs ; 656                         ;
+;         2 data inputs ; 404                         ;
+;         3 data inputs ; 1570                        ;
+;         4 data inputs ; 7925                        ;
 ; cycloneiii_mac_mult   ; 3                           ;
 ; cycloneiii_mac_out    ; 3                           ;
 ; cycloneiii_ram_block  ; 23                          ;
 ;                       ;                             ;
-; Max LUT depth         ; 31.00                       ;
-; Average LUT depth     ; 11.00                       ;
+; Max LUT depth         ; 28.00                       ;
+; Average LUT depth     ; 10.86                       ;
 +-----------------------+-----------------------------+
 
 
@@ -1149,7 +1188,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:37     ;
+; Top            ; 00:00:38     ;
 +----------------+--------------+
 
 
@@ -1159,10 +1198,12 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-    Info: Processing started: Wed Nov 18 11:21:12 2026
+    Info: Processing started: Fri Nov 20 16:23:36 2026
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off AHBLITE_SYS -c AHBLITE_SYS
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
+Info (12021): Found 1 design units, including 1 entities, in source file fpga/ahb_7segdec/ahb7segdec.v
+    Info (12023): Found entity 1: AHB7SEGDEC File: C:/Users/idec/Desktop/chohyunkeon/project/FPGA-SRAM-controller/workspace/quartus/FPGA/AHB_7SEGDEC/AHB7SEGDEC.v Line: 38
 Info (12021): Found 1 design units, including 1 entities, in source file fpga/ahb_vga/vga_sync.v
     Info (12023): Found entity 1: VGAInterface File: C:/Users/idec/Desktop/chohyunkeon/project/FPGA-SRAM-controller/workspace/quartus/FPGA/AHB_VGA/vga_sync.v Line: 37
 Info (12021): Found 1 design units, including 1 entities, in source file fpga/ahb_vga/vga_image.v
@@ -1190,12 +1231,14 @@ Info (12021): Found 1 design units, including 1 entities, in source file fpga/co
     Info (12023): Found entity 1: cortexm0ds_logic File: C:/Users/idec/Desktop/chohyunkeon/project/FPGA-SRAM-controller/workspace/quartus/FPGA/CortexM0-DS/cortexm0ds_logic.v Line: 27
 Info (12021): Found 1 design units, including 1 entities, in source file fpga/ahblite_sys.v
     Info (12023): Found entity 1: AHBLITE_SYS File: C:/Users/idec/Desktop/chohyunkeon/project/FPGA-SRAM-controller/workspace/quartus/FPGA/AHBLITE_SYS.v Line: 38
+Info (12021): Found 1 design units, including 1 entities, in source file /users/idec/desktop/chohyunkeon/project/fpga-sram-controller/rtl/ahb2sram.sv
+    Info (12023): Found entity 1: AHB2SRAM File: C:/Users/idec/Desktop/chohyunkeon/project/FPGA-SRAM-controller/rtl/AHB2SRAM.sv Line: 1
 Warning (10236): Verilog HDL Implicit Net warning at vga_console.v(109): created implicit net for "we" File: C:/Users/idec/Desktop/chohyunkeon/project/FPGA-SRAM-controller/workspace/quartus/FPGA/AHB_VGA/vga_console.v Line: 109
 Warning (10236): Verilog HDL Implicit Net warning at vga_console.v(147): created implicit net for "back_space" File: C:/Users/idec/Desktop/chohyunkeon/project/FPGA-SRAM-controller/workspace/quartus/FPGA/AHB_VGA/vga_console.v Line: 147
-Warning (10236): Verilog HDL Implicit Net warning at AHBLITE_SYS.v(208): created implicit net for "TDI_NS" File: C:/Users/idec/Desktop/chohyunkeon/project/FPGA-SRAM-controller/workspace/quartus/FPGA/AHBLITE_SYS.v Line: 208
+Warning (10236): Verilog HDL Implicit Net warning at AHBLITE_SYS.v(229): created implicit net for "TDI_NS" File: C:/Users/idec/Desktop/chohyunkeon/project/FPGA-SRAM-controller/workspace/quartus/FPGA/AHBLITE_SYS.v Line: 229
 Info (12127): Elaborating entity "AHBLITE_SYS" for the top level hierarchy
 Warning (10034): Output port "LEDR[7..0]" at AHBLITE_SYS.v(44) has no driver File: C:/Users/idec/Desktop/chohyunkeon/project/FPGA-SRAM-controller/workspace/quartus/FPGA/AHBLITE_SYS.v Line: 44
-Info (12128): Elaborating entity "CORTEXM0INTEGRATION" for hierarchy "CORTEXM0INTEGRATION:u_CORTEXM0INTEGRATION" File: C:/Users/idec/Desktop/chohyunkeon/project/FPGA-SRAM-controller/workspace/quartus/FPGA/AHBLITE_SYS.v Line: 248
+Info (12128): Elaborating entity "CORTEXM0INTEGRATION" for hierarchy "CORTEXM0INTEGRATION:u_CORTEXM0INTEGRATION" File: C:/Users/idec/Desktop/chohyunkeon/project/FPGA-SRAM-controller/workspace/quartus/FPGA/AHBLITE_SYS.v Line: 269
 Info (12128): Elaborating entity "cortexm0ds_logic" for hierarchy "CORTEXM0INTEGRATION:u_CORTEXM0INTEGRATION|cortexm0ds_logic:u_logic" File: C:/Users/idec/Desktop/chohyunkeon/project/FPGA-SRAM-controller/workspace/quartus/FPGA/CortexM0-DS/CORTEXM0INTEGRATION.v Line: 243
 Warning (10036): Verilog HDL or VHDL warning at cortexm0ds_logic.v(1517): object "K5epw6" assigned a value but never read File: C:/Users/idec/Desktop/chohyunkeon/project/FPGA-SRAM-controller/workspace/quartus/FPGA/CortexM0-DS/cortexm0ds_logic.v Line: 1517
 Warning (10036): Verilog HDL or VHDL warning at cortexm0ds_logic.v(1517): object "H6epw6" assigned a value but never read File: C:/Users/idec/Desktop/chohyunkeon/project/FPGA-SRAM-controller/workspace/quartus/FPGA/CortexM0-DS/cortexm0ds_logic.v Line: 1517
@@ -1234,12 +1277,12 @@ Warning (10036): Verilog HDL or VHDL warning at cortexm0ds_logic.v(1520): object
 Warning (10036): Verilog HDL or VHDL warning at cortexm0ds_logic.v(1520): object "L0fpw6" assigned a value but never read File: C:/Users/idec/Desktop/chohyunkeon/project/FPGA-SRAM-controller/workspace/quartus/FPGA/CortexM0-DS/cortexm0ds_logic.v Line: 1520
 Warning (10036): Verilog HDL or VHDL warning at cortexm0ds_logic.v(1520): object "J1fpw6" assigned a value but never read File: C:/Users/idec/Desktop/chohyunkeon/project/FPGA-SRAM-controller/workspace/quartus/FPGA/CortexM0-DS/cortexm0ds_logic.v Line: 1520
 Warning (10230): Verilog HDL assignment warning at cortexm0ds_logic.v(3109): truncated value with size 33 to match size of target (10) File: C:/Users/idec/Desktop/chohyunkeon/project/FPGA-SRAM-controller/workspace/quartus/FPGA/CortexM0-DS/cortexm0ds_logic.v Line: 3109
-Info (12128): Elaborating entity "AHBDCD" for hierarchy "AHBDCD:uAHBDCD" File: C:/Users/idec/Desktop/chohyunkeon/project/FPGA-SRAM-controller/workspace/quartus/FPGA/AHBLITE_SYS.v Line: 268
-Info (12128): Elaborating entity "AHBMUX" for hierarchy "AHBMUX:uAHBMUX" File: C:/Users/idec/Desktop/chohyunkeon/project/FPGA-SRAM-controller/workspace/quartus/FPGA/AHBLITE_SYS.v Line: 303
-Info (12128): Elaborating entity "AHB2MEM" for hierarchy "AHB2MEM:uAHB2MEM" File: C:/Users/idec/Desktop/chohyunkeon/project/FPGA-SRAM-controller/workspace/quartus/FPGA/AHBLITE_SYS.v Line: 323
+Info (12128): Elaborating entity "AHBDCD" for hierarchy "AHBDCD:uAHBDCD" File: C:/Users/idec/Desktop/chohyunkeon/project/FPGA-SRAM-controller/workspace/quartus/FPGA/AHBLITE_SYS.v Line: 289
+Info (12128): Elaborating entity "AHBMUX" for hierarchy "AHBMUX:uAHBMUX" File: C:/Users/idec/Desktop/chohyunkeon/project/FPGA-SRAM-controller/workspace/quartus/FPGA/AHBLITE_SYS.v Line: 324
+Info (12128): Elaborating entity "AHB2MEM" for hierarchy "AHB2MEM:uAHB2MEM" File: C:/Users/idec/Desktop/chohyunkeon/project/FPGA-SRAM-controller/workspace/quartus/FPGA/AHBLITE_SYS.v Line: 344
 Warning (10036): Verilog HDL or VHDL warning at AHB2BRAM.v(52): object "APhase_HRADDR" assigned a value but never read File: C:/Users/idec/Desktop/chohyunkeon/project/FPGA-SRAM-controller/workspace/quartus/FPGA/AHB_BRAM/AHB2BRAM.v Line: 52
-Warning (10850): Verilog HDL warning at AHB2BRAM.v(45): number of words (39) in memory file does not match the number of elements in the address range [0:127] File: C:/Users/idec/Desktop/chohyunkeon/project/FPGA-SRAM-controller/workspace/quartus/FPGA/AHB_BRAM/AHB2BRAM.v Line: 45
-Info (12128): Elaborating entity "AHBVGA" for hierarchy "AHBVGA:uAHBVGA" File: C:/Users/idec/Desktop/chohyunkeon/project/FPGA-SRAM-controller/workspace/quartus/FPGA/AHBLITE_SYS.v Line: 340
+Warning (10850): Verilog HDL warning at AHB2BRAM.v(45): number of words (58) in memory file does not match the number of elements in the address range [0:127] File: C:/Users/idec/Desktop/chohyunkeon/project/FPGA-SRAM-controller/workspace/quartus/FPGA/AHB_BRAM/AHB2BRAM.v Line: 45
+Info (12128): Elaborating entity "AHBVGA" for hierarchy "AHBVGA:uAHBVGA" File: C:/Users/idec/Desktop/chohyunkeon/project/FPGA-SRAM-controller/workspace/quartus/FPGA/AHBLITE_SYS.v Line: 361
 Warning (10034): Output port "HRDATA" at AHBVGASYS.v(48) has no driver File: C:/Users/idec/Desktop/chohyunkeon/project/FPGA-SRAM-controller/workspace/quartus/FPGA/AHB_VGA/AHBVGASYS.v Line: 48
 Info (12128): Elaborating entity "VGAInterface" for hierarchy "AHBVGA:uAHBVGA|VGAInterface:uVGAInterface" File: C:/Users/idec/Desktop/chohyunkeon/project/FPGA-SRAM-controller/workspace/quartus/FPGA/AHB_VGA/AHBVGASYS.v Line: 104
 Info (12128): Elaborating entity "GenericCounter" for hierarchy "AHBVGA:uAHBVGA|VGAInterface:uVGAInterface|GenericCounter:FreqDivider" File: C:/Users/idec/Desktop/chohyunkeon/project/FPGA-SRAM-controller/workspace/quartus/FPGA/AHB_VGA/vga_sync.v Line: 72
@@ -1259,6 +1302,11 @@ Info (12128): Elaborating entity "vga_image" for hierarchy "AHBVGA:uAHBVGA|vga_i
 Warning (10230): Verilog HDL assignment warning at vga_image.v(62): truncated value with size 32 to match size of target (16) File: C:/Users/idec/Desktop/chohyunkeon/project/FPGA-SRAM-controller/workspace/quartus/FPGA/AHB_VGA/vga_image.v Line: 62
 Warning (10230): Verilog HDL assignment warning at vga_image.v(80): truncated value with size 32 to match size of target (10) File: C:/Users/idec/Desktop/chohyunkeon/project/FPGA-SRAM-controller/workspace/quartus/FPGA/AHB_VGA/vga_image.v Line: 80
 Info (12128): Elaborating entity "dual_port_ram_sync" for hierarchy "AHBVGA:uAHBVGA|vga_image:uvga_image|dual_port_ram_sync:uimage_ram" File: C:/Users/idec/Desktop/chohyunkeon/project/FPGA-SRAM-controller/workspace/quartus/FPGA/AHB_VGA/vga_image.v Line: 75
+Info (12128): Elaborating entity "AHB2SRAM" for hierarchy "AHB2SRAM:uAHB2SRAM" File: C:/Users/idec/Desktop/chohyunkeon/project/FPGA-SRAM-controller/workspace/quartus/FPGA/AHBLITE_SYS.v Line: 383
+Warning (10036): Verilog HDL or VHDL warning at AHB2SRAM.sv(50): object "is_READ" assigned a value but never read File: C:/Users/idec/Desktop/chohyunkeon/project/FPGA-SRAM-controller/rtl/AHB2SRAM.sv Line: 50
+Warning (10230): Verilog HDL assignment warning at AHB2SRAM.sv(78): truncated value with size 32 to match size of target (20) File: C:/Users/idec/Desktop/chohyunkeon/project/FPGA-SRAM-controller/rtl/AHB2SRAM.sv Line: 78
+Warning (10230): Verilog HDL assignment warning at AHB2SRAM.sv(166): truncated value with size 32 to match size of target (2) File: C:/Users/idec/Desktop/chohyunkeon/project/FPGA-SRAM-controller/rtl/AHB2SRAM.sv Line: 166
+Info (12128): Elaborating entity "AHB7SEGDEC" for hierarchy "AHB7SEGDEC:uAHB7SEGDEC" File: C:/Users/idec/Desktop/chohyunkeon/project/FPGA-SRAM-controller/workspace/quartus/FPGA/AHBLITE_SYS.v Line: 405
 Warning (276020): Inferred RAM node "AHBVGA:uAHBVGA|vga_image:uvga_image|dual_port_ram_sync:uimage_ram|ram_rtl_0" from synchronous design logic.  Pass-through logic has been added to match the read-during-write behavior of the original design.
 Warning (276020): Inferred RAM node "AHBVGA:uAHBVGA|vga_console:uvga_console|dual_port_ram_sync:uvideo_ram|ram_rtl_0" from synchronous design logic.  Pass-through logic has been added to match the read-during-write behavior of the original design.
 Info (19000): Inferred 2 megafunctions from design logic
@@ -1378,7 +1426,7 @@ Warning (14284): Synthesized away the following node(s):
 Warning (12241): 5 hierarchies have connectivity warnings - see the Connectivity Checks report folder
 Info (13014): Ignored 84 buffer(s)
     Info (13019): Ignored 84 SOFT buffer(s)
-Info (13000): Registers with preset signals will power-up high File: C:/Users/idec/Desktop/chohyunkeon/project/FPGA-SRAM-controller/workspace/quartus/FPGA/CortexM0-DS/cortexm0ds_logic.v Line: 17350
+Info (13000): Registers with preset signals will power-up high File: C:/Users/idec/Desktop/chohyunkeon/project/FPGA-SRAM-controller/rtl/AHB2SRAM.sv Line: 124
 Info (13003): DEV_CLRn pin will set, and not reset, register with preset signal due to NOT Gate Push-Back
 Warning (14284): Synthesized away the following node(s):
     Warning (14285): Synthesized away the following RAM node(s):
@@ -1425,10 +1473,21 @@ Warning (13024): Output pins are stuck at VCC or GND
     Warning (13410): Pin "VGA_R[3]" is stuck at GND File: C:/Users/idec/Desktop/chohyunkeon/project/FPGA-SRAM-controller/workspace/quartus/FPGA/AHBLITE_SYS.v Line: 52
     Warning (13410): Pin "VGA_R[4]" is stuck at GND File: C:/Users/idec/Desktop/chohyunkeon/project/FPGA-SRAM-controller/workspace/quartus/FPGA/AHBLITE_SYS.v Line: 52
     Warning (13410): Pin "VGA_SYNC_N" is stuck at GND File: C:/Users/idec/Desktop/chohyunkeon/project/FPGA-SRAM-controller/workspace/quartus/FPGA/AHBLITE_SYS.v Line: 53
-    Warning (13410): Pin "TDO_SWO" is stuck at GND File: C:/Users/idec/Desktop/chohyunkeon/project/FPGA-SRAM-controller/workspace/quartus/FPGA/AHBLITE_SYS.v Line: 61
+    Warning (13410): Pin "TDO_SWO" is stuck at GND File: C:/Users/idec/Desktop/chohyunkeon/project/FPGA-SRAM-controller/workspace/quartus/FPGA/AHBLITE_SYS.v Line: 60
 Info (286030): Timing-Driven Synthesis is running
-Info (17049): 34 registers lost all their fanouts during netlist optimizations.
-Warning (20013): Ignored 547 assignments for entity "DE2_115_Default" -- entity does not exist in design
+Critical Warning (18061): Ignored Power-Up Level option on the following registers
+    Critical Warning (18010): Register AHB7SEGDEC:uAHB7SEGDEC|DIGIT1[0] will power up to High File: C:/Users/idec/Desktop/chohyunkeon/project/FPGA-SRAM-controller/workspace/quartus/FPGA/AHB_7SEGDEC/AHB7SEGDEC.v Line: 98
+    Critical Warning (18010): Register AHB7SEGDEC:uAHB7SEGDEC|DIGIT1[3] will power up to Low File: C:/Users/idec/Desktop/chohyunkeon/project/FPGA-SRAM-controller/workspace/quartus/FPGA/AHB_7SEGDEC/AHB7SEGDEC.v Line: 98
+    Critical Warning (18010): Register AHB7SEGDEC:uAHB7SEGDEC|DIGIT1[2] will power up to High File: C:/Users/idec/Desktop/chohyunkeon/project/FPGA-SRAM-controller/workspace/quartus/FPGA/AHB_7SEGDEC/AHB7SEGDEC.v Line: 98
+    Critical Warning (18010): Register AHB7SEGDEC:uAHB7SEGDEC|DIGIT1[1] will power up to Low File: C:/Users/idec/Desktop/chohyunkeon/project/FPGA-SRAM-controller/workspace/quartus/FPGA/AHB_7SEGDEC/AHB7SEGDEC.v Line: 98
+    Critical Warning (18010): Register AHB7SEGDEC:uAHB7SEGDEC|DIGIT2[0] will power up to Low File: C:/Users/idec/Desktop/chohyunkeon/project/FPGA-SRAM-controller/workspace/quartus/FPGA/AHB_7SEGDEC/AHB7SEGDEC.v Line: 98
+    Critical Warning (18010): Register AHB7SEGDEC:uAHB7SEGDEC|DIGIT2[2] will power up to High File: C:/Users/idec/Desktop/chohyunkeon/project/FPGA-SRAM-controller/workspace/quartus/FPGA/AHB_7SEGDEC/AHB7SEGDEC.v Line: 98
+    Critical Warning (18010): Register AHB7SEGDEC:uAHB7SEGDEC|DIGIT3[3] will power up to Low File: C:/Users/idec/Desktop/chohyunkeon/project/FPGA-SRAM-controller/workspace/quartus/FPGA/AHB_7SEGDEC/AHB7SEGDEC.v Line: 98
+    Critical Warning (18010): Register AHB7SEGDEC:uAHB7SEGDEC|DIGIT3[2] will power up to Low File: C:/Users/idec/Desktop/chohyunkeon/project/FPGA-SRAM-controller/workspace/quartus/FPGA/AHB_7SEGDEC/AHB7SEGDEC.v Line: 98
+    Critical Warning (18010): Register AHB7SEGDEC:uAHB7SEGDEC|DIGIT4[3] will power up to Low File: C:/Users/idec/Desktop/chohyunkeon/project/FPGA-SRAM-controller/workspace/quartus/FPGA/AHB_7SEGDEC/AHB7SEGDEC.v Line: 98
+    Critical Warning (18010): Register AHB7SEGDEC:uAHB7SEGDEC|DIGIT4[2] will power up to Low File: C:/Users/idec/Desktop/chohyunkeon/project/FPGA-SRAM-controller/workspace/quartus/FPGA/AHB_7SEGDEC/AHB7SEGDEC.v Line: 98
+Info (17049): 45 registers lost all their fanouts during netlist optimizations.
+Warning (20013): Ignored 506 assignments for entity "DE2_115_Default" -- entity does not exist in design
     Warning (20014): Assignment for entity set_instance_assignment -name IO_MAXIMUM_TOGGLE_RATE "0 MHz" -to HEX0 -entity DE2_115_Default was ignored
     Warning (20014): Assignment for entity set_instance_assignment -name IO_MAXIMUM_TOGGLE_RATE "0 MHz" -to HEX1 -entity DE2_115_Default was ignored
     Warning (20014): Assignment for entity set_instance_assignment -name IO_MAXIMUM_TOGGLE_RATE "0 MHz" -to HEX2 -entity DE2_115_Default was ignored
@@ -1849,47 +1908,6 @@ Warning (20013): Ignored 547 assignments for entity "DE2_115_Default" -- entity 
     Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to SD_WP_N -entity DE2_115_Default was ignored
     Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to SMA_CLKIN -entity DE2_115_Default was ignored
     Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to SMA_CLKOUT -entity DE2_115_Default was ignored
-    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to SRAM_ADDR[0] -entity DE2_115_Default was ignored
-    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to SRAM_ADDR[10] -entity DE2_115_Default was ignored
-    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to SRAM_ADDR[11] -entity DE2_115_Default was ignored
-    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to SRAM_ADDR[12] -entity DE2_115_Default was ignored
-    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to SRAM_ADDR[13] -entity DE2_115_Default was ignored
-    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to SRAM_ADDR[14] -entity DE2_115_Default was ignored
-    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to SRAM_ADDR[15] -entity DE2_115_Default was ignored
-    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to SRAM_ADDR[16] -entity DE2_115_Default was ignored
-    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to SRAM_ADDR[17] -entity DE2_115_Default was ignored
-    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to SRAM_ADDR[18] -entity DE2_115_Default was ignored
-    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to SRAM_ADDR[19] -entity DE2_115_Default was ignored
-    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to SRAM_ADDR[1] -entity DE2_115_Default was ignored
-    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to SRAM_ADDR[2] -entity DE2_115_Default was ignored
-    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to SRAM_ADDR[3] -entity DE2_115_Default was ignored
-    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to SRAM_ADDR[4] -entity DE2_115_Default was ignored
-    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to SRAM_ADDR[5] -entity DE2_115_Default was ignored
-    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to SRAM_ADDR[6] -entity DE2_115_Default was ignored
-    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to SRAM_ADDR[7] -entity DE2_115_Default was ignored
-    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to SRAM_ADDR[8] -entity DE2_115_Default was ignored
-    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to SRAM_ADDR[9] -entity DE2_115_Default was ignored
-    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to SRAM_CE_N -entity DE2_115_Default was ignored
-    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to SRAM_DQ[0] -entity DE2_115_Default was ignored
-    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to SRAM_DQ[10] -entity DE2_115_Default was ignored
-    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to SRAM_DQ[11] -entity DE2_115_Default was ignored
-    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to SRAM_DQ[12] -entity DE2_115_Default was ignored
-    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to SRAM_DQ[13] -entity DE2_115_Default was ignored
-    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to SRAM_DQ[14] -entity DE2_115_Default was ignored
-    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to SRAM_DQ[15] -entity DE2_115_Default was ignored
-    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to SRAM_DQ[1] -entity DE2_115_Default was ignored
-    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to SRAM_DQ[2] -entity DE2_115_Default was ignored
-    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to SRAM_DQ[3] -entity DE2_115_Default was ignored
-    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to SRAM_DQ[4] -entity DE2_115_Default was ignored
-    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to SRAM_DQ[5] -entity DE2_115_Default was ignored
-    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to SRAM_DQ[6] -entity DE2_115_Default was ignored
-    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to SRAM_DQ[7] -entity DE2_115_Default was ignored
-    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to SRAM_DQ[8] -entity DE2_115_Default was ignored
-    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to SRAM_DQ[9] -entity DE2_115_Default was ignored
-    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to SRAM_LB_N -entity DE2_115_Default was ignored
-    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to SRAM_OE_N -entity DE2_115_Default was ignored
-    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to SRAM_UB_N -entity DE2_115_Default was ignored
-    Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to SRAM_WE_N -entity DE2_115_Default was ignored
     Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "2.5 V" -to SW[0] -entity DE2_115_Default was ignored
     Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "2.5 V" -to SW[10] -entity DE2_115_Default was ignored
     Warning (20014): Assignment for entity set_instance_assignment -name IO_STANDARD "2.5 V" -to SW[11] -entity DE2_115_Default was ignored
@@ -1981,18 +1999,18 @@ Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
 Warning (21074): Design contains 1 input pin(s) that do not drive logic
     Warning (15610): No output dependent on input pin "TDI_NC" File: C:/Users/idec/Desktop/chohyunkeon/project/FPGA-SRAM-controller/workspace/quartus/FPGA/AHBLITE_SYS.v Line: 58
-Info (21057): Implemented 15151 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 15536 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 4 input pins
-    Info (21059): Implemented 48 output pins
-    Info (21060): Implemented 1 bidirectional pins
-    Info (21061): Implemented 15069 logic cells
+    Info (21059): Implemented 101 output pins
+    Info (21060): Implemented 17 bidirectional pins
+    Info (21061): Implemented 15385 logic cells
     Info (21064): Implemented 23 RAM segments
     Info (21062): Implemented 6 DSP elements
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 668 warnings
-    Info: Peak virtual memory: 4896 megabytes
-    Info: Processing ended: Wed Nov 18 11:22:05 2026
-    Info: Elapsed time: 00:00:53
-    Info: Total CPU time (on all processors): 00:01:04
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 641 warnings
+    Info: Peak virtual memory: 4899 megabytes
+    Info: Processing ended: Fri Nov 20 16:24:27 2026
+    Info: Elapsed time: 00:00:51
+    Info: Total CPU time (on all processors): 00:01:01
 
 
 +------------------------------------------+

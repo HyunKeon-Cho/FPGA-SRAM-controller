@@ -18,5 +18,7 @@ SRAM_dummy.sv
 ..\..\workspace\quartus\FPGA\AHB_VGA\vga_image.v
 ..\..\workspace\quartus\FPGA\AHB_VGA\vga_sync.v
 
+..\..\workspace\quartus\FPGA\AHB_7SEGDEC\AHB7SEGDEC.v
+
 ..\..\workspace\quartus\FPGA\CortexM0-DS\CORTEXM0INTEGRATION.v
 ..\..\workspace\quartus\FPGA\CortexM0-DS\cortexm0ds_logic.v

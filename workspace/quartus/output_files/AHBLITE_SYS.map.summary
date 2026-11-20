@@ -1,13 +1,13 @@
-Analysis & Synthesis Status : Successful - Wed Nov 18 11:22:04 2026
+Analysis & Synthesis Status : Successful - Fri Nov 20 16:24:27 2026
 Quartus Prime Version : 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 Revision Name : AHBLITE_SYS
 Top-level Entity Name : AHBLITE_SYS
 Family : Cyclone IV E
-Total logic elements : 14,861
-    Total combinational functions : 10,722
-    Dedicated logic registers : 5,671
-Total registers : 5671
-Total pins : 53
+Total logic elements : 15,169
+    Total combinational functions : 10,767
+    Dedicated logic registers : 5,746
+Total registers : 5746
+Total pins : 122
 Total virtual pins : 0
 Total memory bits : 159,744
 Embedded Multiplier 9-bit elements : 6

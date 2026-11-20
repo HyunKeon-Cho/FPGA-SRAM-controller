@@ -49,8 +49,6 @@ state_t cstate;
 wire    is_IDLE;
 wire    is_READ;
 wire    is_WRITE;
-wire    is_READ_complete;
-wire    is_WRITE_complete;
 
 // ---- AHB-Lite ----
 // address phase
@@ -84,7 +82,7 @@ assign SRAM_DQ   = (is_WRITE && (dphase_cnt <= dphase_len)) ? ((dphase_cnt[0]) ?
 // ---- AHB-Lite ---- 
 // port
 assign HREADYOUT = is_IDLE | dphase_done;
-assign HRDATA    = {SRAM_DQ, dphase_buf};
+assign HRDATA = {SRAM_DQ, dphase_buf};
 
 // address phase
 assign aphase_hk = HSEL & HTRANS[1] & HREADY;

@@ -29,8 +29,8 @@
     Program header entries: 1
     Section header entries: 11
 
-    Program header offset: 1664 (0x00000680)
-    Section header offset: 1696 (0x000006a0)
+    Program header offset: 1748 (0x000006d4)
+    Section header offset: 1780 (0x000006f4)
 
     Section header string table index: 10
 
@@ -42,8 +42,8 @@
     File Offset   : 52 (0x34)
     Virtual Addr  : 0x00000000
     Physical Addr : 0x00000000
-    Size in file  : 168 bytes (0xa8)
-    Size in memory: 168 bytes (0xa8)
+    Size in file  : 232 bytes (0xe8)
+    Size in memory: 232 bytes (0xe8)
     Flags         : PF_X + PF_R + PF_ARM_ENTRY (0x80000005)
     Alignment     : 4
 
@@ -57,7 +57,7 @@
     Flags       : SHF_ALLOC + SHF_EXECINSTR (0x00000006)
     Addr        : 0x00000000
     File Offset : 52 (0x34)
-    Size        : 168 bytes (0xa8)
+    Size        : 232 bytes (0xe8)
     Link        : SHN_UNDEF
     Info        : 0
     Alignment   : 4
@@ -101,25 +101,51 @@
     $t
     .text
     Reset_Handler
-        0x00000080:    4807        .H      LDR      r0,[pc,#28] ; [0xa0] = 0x51000000
-        0x00000082:    4908        .I      LDR      r1,[pc,#32] ; [0xa4] = 0x5100000f
-        0x00000084:    2300        .#      MOVS     r3,#0
-        0x00000086:    0004        ..      MOVS     r4,r0
-        0x00000088:    441c        .D      ADD      r4,r4,r3
-        0x0000008a:    6023        #`      STR      r3,[r4,#0]
-        0x0000008c:    3304        .3      ADDS     r3,#4
-        0x0000008e:    428c        .B      CMP      r4,r1
-        0x00000090:    d1f9        ..      BNE      0x86 ; Reset_Handler + 6
-        0x00000092:    2300        .#      MOVS     r3,#0
-        0x00000094:    0004        ..      MOVS     r4,r0
-        0x00000096:    441c        .D      ADD      r4,r4,r3
-        0x00000098:    6822        "h      LDR      r2,[r4,#0]
-        0x0000009a:    3304        .3      ADDS     r3,#4
-        0x0000009c:    428c        .B      CMP      r4,r1
-        0x0000009e:    d1f9        ..      BNE      0x94 ; Reset_Handler + 20
+        0x00000080:    4811        .H      LDR      r0,[pc,#68] ; [0xc8] = 0x51000000
+        0x00000082:    4912        .I      LDR      r1,[pc,#72] ; [0xcc] = 0x52000000
+        0x00000084:    4a12        .J      LDR      r2,[pc,#72] ; [0xd0] = 0x52000004
+        0x00000086:    4b13        .K      LDR      r3,[pc,#76] ; [0xd4] = 0x52000008
+        0x00000088:    2500        .%      MOVS     r5,#0
+        0x0000008a:    4c13        .L      LDR      r4,[pc,#76] ; [0xd8] = 0x5200000c
+        0x0000008c:    600d        .`      STR      r5,[r1,#0]
+        0x0000008e:    6015        .`      STR      r5,[r2,#0]
+        0x00000090:    601d        .`      STR      r5,[r3,#0]
+        0x00000092:    6025        %`      STR      r5,[r4,#0]
+        0x00000094:    4c11        .L      LDR      r4,[pc,#68] ; [0xdc] = 0x51000010
+        0x00000096:    4d12        .M      LDR      r5,[pc,#72] ; [0xe0] = 0
+        0x00000098:    1f24        $.      SUBS     r4,r4,#4
+        0x0000009a:    6024        $`      STR      r4,[r4,#0]
+        0x0000009c:    1c6d        m.      ADDS     r5,r5,#1
+        0x0000009e:    600d        .`      STR      r5,[r1,#0]
+        0x000000a0:    4284        .B      CMP      r4,r0
+        0x000000a2:    d1f9        ..      BNE      0x98 ; Reset_Handler + 24
+        0x000000a4:    4c0d        .L      LDR      r4,[pc,#52] ; [0xdc] = 0x51000010
+        0x000000a6:    4d0e        .M      LDR      r5,[pc,#56] ; [0xe0] = 0
+        0x000000a8:    4e0d        .N      LDR      r6,[pc,#52] ; [0xe0] = 0
+        0x000000aa:    1f24        $.      SUBS     r4,r4,#4
+        0x000000ac:    6827        'h      LDR      r7,[r4,#0]
+        0x000000ae:    42a7        .B      CMP      r7,r4
+        0x000000b0:    d102        ..      BNE      0xb8 ; Reset_Handler + 56
+        0x000000b2:    1c6d        m.      ADDS     r5,r5,#1
+        0x000000b4:    6015        .`      STR      r5,[r2,#0]
+        0x000000b6:    e001        ..      B        0xbc ; Reset_Handler + 60
+        0x000000b8:    1c76        v.      ADDS     r6,r6,#1
+        0x000000ba:    601e        .`      STR      r6,[r3,#0]
+        0x000000bc:    4284        .B      CMP      r4,r0
+        0x000000be:    d1f4        ..      BNE      0xaa ; Reset_Handler + 42
+        0x000000c0:    4b05        .K      LDR      r3,[pc,#20] ; [0xd8] = 0x5200000c
+        0x000000c2:    4908        .I      LDR      r1,[pc,#32] ; [0xe4] = 0xf
+        0x000000c4:    6019        .`      STR      r1,[r3,#0]
     $d
-        0x000000a0:    51000000    ...Q    DCD    1358954496
-        0x000000a4:    5100000f    ...Q    DCD    1358954511
+        0x000000c6:    0000        ..      DCW    0
+        0x000000c8:    51000000    ...Q    DCD    1358954496
+        0x000000cc:    52000000    ...R    DCD    1375731712
+        0x000000d0:    52000004    ...R    DCD    1375731716
+        0x000000d4:    52000008    ...R    DCD    1375731720
+        0x000000d8:    5200000c    ...R    DCD    1375731724
+        0x000000dc:    51000010    ...Q    DCD    1358954512
+        0x000000e0:    00000000    ....    DCD    0
+        0x000000e4:    0000000f    ....    DCD    15
 
 ====================================
 
@@ -129,7 +155,7 @@
     Type        : SHT_PROGBITS (0x00000001)
     Flags       : None (0x00000000)
     Addr        : 0x00000000
-    File Offset : 220 (0xdc)
+    File Offset : 284 (0x11c)
     Size        : 32 bytes (0x20)
     Link        : SHN_UNDEF
     Info        : 0
@@ -145,7 +171,7 @@
     Type        : SHT_PROGBITS (0x00000001)
     Flags       : None (0x00000000)
     Addr        : 0x00000000
-    File Offset : 252 (0xfc)
+    File Offset : 316 (0x13c)
     Size        : 68 bytes (0x44)
     Link        : SHN_UNDEF
     Info        : 0
@@ -161,7 +187,7 @@
     Type        : SHT_PROGBITS (0x00000001)
     Flags       : None (0x00000000)
     Addr        : 0x00000000
-    File Offset : 320 (0x140)
+    File Offset : 384 (0x180)
     Size        : 212 bytes (0xd4)
     Link        : SHN_UNDEF
     Info        : 0
@@ -177,8 +203,8 @@
     Type        : SHT_PROGBITS (0x00000001)
     Flags       : None (0x00000000)
     Addr        : 0x00000000
-    File Offset : 532 (0x214)
-    Size        : 76 bytes (0x4c)
+    File Offset : 596 (0x254)
+    Size        : 96 bytes (0x60)
     Link        : SHN_UNDEF
     Info        : 0
     Alignment   : 1
@@ -193,7 +219,7 @@
     Type        : SHT_SYMTAB (0x00000002)
     Flags       : None (0x00000000)
     Addr        : 0x00000000
-    File Offset : 608 (0x260)
+    File Offset : 692 (0x2b4)
     Size        : 160 bytes (0xa0)
     Link        : Section 7 (.strtab)
     Info        : Last local symbol no = 6
@@ -209,7 +235,7 @@
     Type        : SHT_STRTAB (0x00000003)
     Flags       : None (0x00000000)
     Addr        : 0x00000000
-    File Offset : 768 (0x300)
+    File Offset : 852 (0x354)
     Size        : 188 bytes (0xbc)
     Link        : SHN_UNDEF
     Info        : 0
@@ -225,7 +251,7 @@
     Type        : SHT_NOTE (0x00000007)
     Flags       : None (0x00000000)
     Addr        : 0x00000000
-    File Offset : 956 (0x3bc)
+    File Offset : 1040 (0x410)
     Size        : 20 bytes (0x14)
     Link        : SHN_UNDEF
     Info        : 0
@@ -245,7 +271,7 @@
     Type        : SHT_PROGBITS (0x00000001)
     Flags       : None (0x00000000)
     Addr        : 0x00000000
-    File Offset : 976 (0x3d0)
+    File Offset : 1060 (0x424)
     Size        : 576 bytes (0x240)
     Link        : SHN_UNDEF
     Info        : 0
@@ -274,7 +300,7 @@
     Type        : SHT_STRTAB (0x00000003)
     Flags       : None (0x00000000)
     Addr        : 0x00000000
-    File Offset : 1552 (0x610)
+    File Offset : 1636 (0x664)
     Size        : 112 bytes (0x70)
     Link        : SHN_UNDEF
     Info        : 0

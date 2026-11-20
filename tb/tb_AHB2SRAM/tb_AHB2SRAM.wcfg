@@ -3,22 +3,22 @@
    <wave_state>
    </wave_state>
    <db_ref_list>
-      <db_ref path="C:/Users/idec/Desktop/chohyunkeon/project/FPGA-SRAM-controller/.log/wave_viewer/10567-29716-28207/behav_tb.wdb" id="1">
+      <db_ref path="C:/Users/idec/Desktop/chohyunkeon/project/FPGA-SRAM-controller/.log/wave_viewer/6781-1407-8377/behav_tb.wdb" id="1">
          <top_modules>
             <top_module name="tb_AHB2SRAM" />
          </top_modules>
       </db_ref>
    </db_ref_list>
    <zoom_setting>
-      <ZoomStartTime time="0.000000000 ms"></ZoomStartTime>
-      <ZoomEndTime time="506.500000001 ms"></ZoomEndTime>
-      <Cursor1Time time="0.000000000 ms"></Cursor1Time>
+      <ZoomStartTime time="102.129421227 ms"></ZoomStartTime>
+      <ZoomEndTime time="1,139.129421228 ms"></ZoomEndTime>
+      <Cursor1Time time="274.962754560 ms"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
-      <NameColumnWidth column_width="204"></NameColumnWidth>
-      <ValueColumnWidth column_width="59"></ValueColumnWidth>
+      <NameColumnWidth column_width="181"></NameColumnWidth>
+      <ValueColumnWidth column_width="58"></ValueColumnWidth>
    </column_width_setting>
-   <WVObjectSize size="45" />
+   <WVObjectSize size="52" />
    <wvobject fp_name="/tb_AHB2SRAM/clk" type="logic">
       <obj_property name="ElementShortName">clk</obj_property>
       <obj_property name="ObjectShortName">clk</obj_property>
@@ -26,6 +26,30 @@
    <wvobject fp_name="/tb_AHB2SRAM/nreset" type="logic">
       <obj_property name="ElementShortName">nreset</obj_property>
       <obj_property name="ObjectShortName">nreset</obj_property>
+   </wvobject>
+   <wvobject type="divider" fp_name="divider44">
+      <obj_property name="label">RESULT</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_AHB2SRAM/SoC/uAHB7SEGDEC/DIGIT1" type="array">
+      <obj_property name="ElementShortName">DIGIT1[7:0]</obj_property>
+      <obj_property name="ObjectShortName">DIGIT1[7:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_AHB2SRAM/SoC/uAHB7SEGDEC/DIGIT2" type="array">
+      <obj_property name="ElementShortName">DIGIT2[7:0]</obj_property>
+      <obj_property name="ObjectShortName">DIGIT2[7:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_AHB2SRAM/SoC/uAHB7SEGDEC/DIGIT3" type="array">
+      <obj_property name="ElementShortName">DIGIT3[7:0]</obj_property>
+      <obj_property name="ObjectShortName">DIGIT3[7:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_AHB2SRAM/SoC/uAHB7SEGDEC/DIGIT4" type="array">
+      <obj_property name="ElementShortName">DIGIT4[7:0]</obj_property>
+      <obj_property name="ObjectShortName">DIGIT4[7:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
    </wvobject>
    <wvobject type="divider" fp_name="divider44">
       <obj_property name="label">AHB-Lite</obj_property>
@@ -65,53 +89,35 @@
       <obj_property name="label">AHB-Lite : Data</obj_property>
       <obj_property name="DisplayName">label</obj_property>
    </wvobject>
-   <wvobject fp_name="/tb_AHB2SRAM/SoC/uAHB2SRAM/HWRITE" type="logic">
-      <obj_property name="ElementShortName">HWRITE</obj_property>
-      <obj_property name="ObjectShortName">HWRITE</obj_property>
+   <wvobject fp_name="/tb_AHB2SRAM/SoC/uAHB2SRAM/HSEL" type="logic">
+      <obj_property name="ElementShortName">HSEL</obj_property>
+      <obj_property name="ObjectShortName">HSEL</obj_property>
    </wvobject>
    <wvobject fp_name="/tb_AHB2SRAM/SoC/uAHB2SRAM/HADDR" type="array">
       <obj_property name="ElementShortName">HADDR[31:0]</obj_property>
       <obj_property name="ObjectShortName">HADDR[31:0]</obj_property>
    </wvobject>
-   <wvobject fp_name="/tb_AHB2SRAM/SoC/uAHB2SRAM/HWDATA" type="array">
-      <obj_property name="ElementShortName">HWDATA[31:0]</obj_property>
-      <obj_property name="ObjectShortName">HWDATA[31:0]</obj_property>
-   </wvobject>
    <wvobject fp_name="/tb_AHB2SRAM/SoC/uAHB2SRAM/HRDATA" type="array">
       <obj_property name="ElementShortName">HRDATA[31:0]</obj_property>
       <obj_property name="ObjectShortName">HRDATA[31:0]</obj_property>
    </wvobject>
-   <wvobject type="divider" fp_name="divider44">
-      <obj_property name="label">SRAM</obj_property>
-      <obj_property name="DisplayName">label</obj_property>
+   <wvobject fp_name="/tb_AHB2SRAM/SoC/uAHB2SRAM/HWRITE" type="logic">
+      <obj_property name="ElementShortName">HWRITE</obj_property>
+      <obj_property name="ObjectShortName">HWRITE</obj_property>
+      <obj_property name="CustomSignalColor">#808000</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
    </wvobject>
-   <wvobject fp_name="/tb_AHB2SRAM/SoC/uAHB2SRAM/SRAM_ADDR" type="array">
-      <obj_property name="ElementShortName">SRAM_ADDR[19:0]</obj_property>
-      <obj_property name="ObjectShortName">SRAM_ADDR[19:0]</obj_property>
+   <wvobject fp_name="/tb_AHB2SRAM/SoC/uAHB2SRAM/HADDR" type="array">
+      <obj_property name="ElementShortName">HADDR[31:0]</obj_property>
+      <obj_property name="ObjectShortName">HADDR[31:0]</obj_property>
+      <obj_property name="CustomSignalColor">#808000</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
    </wvobject>
-   <wvobject fp_name="/tb_AHB2SRAM/SoC/uAHB2SRAM/SRAM_DQ" type="array">
-      <obj_property name="ElementShortName">SRAM_DQ[15:0]</obj_property>
-      <obj_property name="ObjectShortName">SRAM_DQ[15:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/tb_AHB2SRAM/SoC/uAHB2SRAM/SRAM_UB_N" type="logic">
-      <obj_property name="ElementShortName">SRAM_UB_N</obj_property>
-      <obj_property name="ObjectShortName">SRAM_UB_N</obj_property>
-   </wvobject>
-   <wvobject fp_name="/tb_AHB2SRAM/SoC/uAHB2SRAM/SRAM_LB_N" type="logic">
-      <obj_property name="ElementShortName">SRAM_LB_N</obj_property>
-      <obj_property name="ObjectShortName">SRAM_LB_N</obj_property>
-   </wvobject>
-   <wvobject fp_name="/tb_AHB2SRAM/SoC/uAHB2SRAM/SRAM_CE_N" type="logic">
-      <obj_property name="ElementShortName">SRAM_CE_N</obj_property>
-      <obj_property name="ObjectShortName">SRAM_CE_N</obj_property>
-   </wvobject>
-   <wvobject fp_name="/tb_AHB2SRAM/SoC/uAHB2SRAM/SRAM_OE_N" type="logic">
-      <obj_property name="ElementShortName">SRAM_OE_N</obj_property>
-      <obj_property name="ObjectShortName">SRAM_OE_N</obj_property>
-   </wvobject>
-   <wvobject fp_name="/tb_AHB2SRAM/SoC/uAHB2SRAM/SRAM_WE_N" type="logic">
-      <obj_property name="ElementShortName">SRAM_WE_N</obj_property>
-      <obj_property name="ObjectShortName">SRAM_WE_N</obj_property>
+   <wvobject fp_name="/tb_AHB2SRAM/SoC/uAHB2SRAM/HWDATA" type="array">
+      <obj_property name="ElementShortName">HWDATA[31:0]</obj_property>
+      <obj_property name="ObjectShortName">HWDATA[31:0]</obj_property>
+      <obj_property name="CustomSignalColor">#808000</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
    </wvobject>
    <wvobject type="divider" fp_name="divider44">
       <obj_property name="label">FSM : address phase</obj_property>
@@ -166,6 +172,64 @@
       <obj_property name="ObjectShortName">dphase_buf[15:0]</obj_property>
    </wvobject>
    <wvobject type="divider" fp_name="divider44">
+      <obj_property name="label">SRAM</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_AHB2SRAM/SoC/uAHB2SRAM/SRAM_CE_N" type="logic">
+      <obj_property name="ElementShortName">SRAM_CE_N</obj_property>
+      <obj_property name="ObjectShortName">SRAM_CE_N</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_AHB2SRAM/SoC/uAHB2SRAM/SRAM_OE_N" type="logic">
+      <obj_property name="ElementShortName">SRAM_OE_N</obj_property>
+      <obj_property name="ObjectShortName">SRAM_OE_N</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_AHB2SRAM/SoC/uAHB2SRAM/SRAM_ADDR" type="array">
+      <obj_property name="ElementShortName">SRAM_ADDR[19:0]</obj_property>
+      <obj_property name="ObjectShortName">SRAM_ADDR[19:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_AHB2SRAM/SoC/uAHB2SRAM/SRAM_DQ" type="array">
+      <obj_property name="ElementShortName">SRAM_DQ[15:0]</obj_property>
+      <obj_property name="ObjectShortName">SRAM_DQ[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="vbus172" type="vbus">
+      <obj_property name="label">SRAM_write_enable</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <wvobject fp_name="/tb_AHB2SRAM/SoC/uAHB2SRAM/SRAM_WE_N" type="logic">
+         <obj_property name="ElementShortName">SRAM_WE_N</obj_property>
+         <obj_property name="ObjectShortName">SRAM_WE_N</obj_property>
+         <obj_property name="CustomSignalColor">#808000</obj_property>
+         <obj_property name="UseCustomSignalColor">true</obj_property>
+      </wvobject>
+      <wvobject fp_name="/tb_AHB2SRAM/SoC/uAHB2SRAM/SRAM_CE_N" type="logic">
+         <obj_property name="ElementShortName">SRAM_CE_N</obj_property>
+         <obj_property name="ObjectShortName">SRAM_CE_N</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject fp_name="/tb_AHB2SRAM/SoC/uAHB2SRAM/SRAM_ADDR" type="array">
+      <obj_property name="ElementShortName">SRAM_ADDR[19:0]</obj_property>
+      <obj_property name="ObjectShortName">SRAM_ADDR[19:0]</obj_property>
+      <obj_property name="CustomSignalColor">#808000</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_AHB2SRAM/SoC/uAHB2SRAM/SRAM_DQ" type="array">
+      <obj_property name="ElementShortName">SRAM_DQ[15:0]</obj_property>
+      <obj_property name="ObjectShortName">SRAM_DQ[15:0]</obj_property>
+      <obj_property name="CustomSignalColor">#808000</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_AHB2SRAM/SoC/uAHB2SRAM/SRAM_UB_N" type="logic">
+      <obj_property name="ElementShortName">SRAM_UB_N</obj_property>
+      <obj_property name="ObjectShortName">SRAM_UB_N</obj_property>
+      <obj_property name="CustomSignalColor">#808000</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_AHB2SRAM/SoC/uAHB2SRAM/SRAM_LB_N" type="logic">
+      <obj_property name="ElementShortName">SRAM_LB_N</obj_property>
+      <obj_property name="ObjectShortName">SRAM_LB_N</obj_property>
+      <obj_property name="CustomSignalColor">#808000</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+   </wvobject>
+   <wvobject type="divider" fp_name="divider44">
       <obj_property name="label">FSM : state</obj_property>
       <obj_property name="DisplayName">label</obj_property>
    </wvobject>
@@ -180,14 +244,6 @@
    <wvobject fp_name="/tb_AHB2SRAM/SoC/uAHB2SRAM/is_WRITE" type="logic">
       <obj_property name="ElementShortName">is_WRITE</obj_property>
       <obj_property name="ObjectShortName">is_WRITE</obj_property>
-   </wvobject>
-   <wvobject fp_name="/tb_AHB2SRAM/SoC/uAHB2SRAM/is_READ_complete" type="logic">
-      <obj_property name="ElementShortName">is_READ_complete</obj_property>
-      <obj_property name="ObjectShortName">is_READ_complete</obj_property>
-   </wvobject>
-   <wvobject fp_name="/tb_AHB2SRAM/SoC/uAHB2SRAM/is_WRITE_complete" type="logic">
-      <obj_property name="ElementShortName">is_WRITE_complete</obj_property>
-      <obj_property name="ObjectShortName">is_WRITE_complete</obj_property>
    </wvobject>
    <wvobject fp_name="/tb_AHB2SRAM/SoC/uAHB2SRAM/MEM_DEPTH" type="array">
       <obj_property name="ElementShortName">MEM_DEPTH[31:0]</obj_property>

@@ -69,7 +69,7 @@ module tb_AHB2SRAM();
 	begin
 //		$shm_open("SoC.shm");
 //		$shm_probe("AC");
-		#(400000)
+		#(400)
 		$finish;
 	end
 

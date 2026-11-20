@@ -56,24 +56,68 @@ Reset_Handler   PROC
 
 ;Write "TEST" to the text console
 
+; R0 : SRAM Base addr
+; R1 : SEG  Base addr : WRITE
+; R2 : SEG  Base addr : PASS
+; R3 : SEG  Base addr : FAIL
+
+
 MAIN			LDR 	R0, =0x51000000
-				LDR		R1, =0x5100000F
-MEM_W			MOVS	R3, #0
-MEM_W_LOOP	    MOVS	R4, R0
-				ADD		R4, R4, R3
-				STR		R3, [R4]
-				ADDS	R3, #4
-				CMP		R4, R1
+				LDR		R1, =0x52000000
+				LDR		R2, =0x52000004
+				LDR		R3, =0x52000008
+				
+				LDR		R4, =0x5200000C
+				MOVS	R5, #'G'
+				STR		R5, [R1]
+				MOVS	R5, #'N'
+				STR		R5, [R2]
+				MOVS	R5, #'I'
+				STR		R5, [R3]
+				MOVS	R5, #' '
+				STR		R5, [R4]
+				
+MEM_W			LDR		R4, =0x51000010
+				LDR		R5, =0x0
+MEM_W_LOOP	    SUBS	R4, R4, #4
+				STR		R4, [R4]
+				
+				ADDS	R5, R5, #1
+				STR		R5, [R1]
+				
+				CMP		R4, R0
 				BNE		MEM_W_LOOP
 				
-MEM_R			MOVS	R3, #0
-MEM_R_LOOP	    MOVS	R4, R0
-				ADD		R4, R4, R3
-				LDR		R2, [R4]
-				ADDS	R3, #4
-				CMP		R4, R1
+MEM_R			LDR		R4, =0x51000010
+				LDR		R5, =0x0
+				LDR		R6, =0x0
+MEM_R_LOOP	    SUBS	R4, R4, #4
+				LDR		R7, [R4]
+				CMP		R7, R4
+				BNE		MEM_R_FAIL		
+MEM_R_PASS		ADDS	R5, R5, #1
+				STR		R5, [R2]
+				B		MEM_R_RST
+MEM_R_FAIL		ADDS	R6, R6, #1
+				STR		R6, [R3]
+				
+MEM_R_RST		CMP		R4, R0
 				BNE		MEM_R_LOOP
+				
+				
+				LDR		R3, =0x5200000C
+				LDR		R1, =0x0000000F
+				STR		R1, [R3]
 
+RESULT			LDR		R4, =0x5200000C
+				MOVS	R5, #' '
+				STR		R5, [R1]
+				MOVS	R5, #'N'
+				STR		R5, [R2]
+				MOVS	R5, #'I'
+				STR		R5, [R3]
+				MOVS	R5, #' '
+				STR		R5, [R4]
 ;Draw a triangle
 
 

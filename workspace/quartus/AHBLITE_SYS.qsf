@@ -1099,6 +1099,8 @@ set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
 set_location_assignment PIN_Y2 -to CLK
 set_location_assignment PIN_Y23 -to RESET
 set_instance_assignment -name IO_STANDARD "2.5 V" -to LEDG[17] -entity DE2_115_Default
+
+set_global_assignment -name VERILOG_FILE FPGA/AHB_7SEGDEC/AHB7SEGDEC.v
 set_global_assignment -name VERILOG_FILE FPGA/AHB_VGA/vga_sync.v
 set_global_assignment -name VERILOG_FILE FPGA/AHB_VGA/vga_image.v
 set_global_assignment -name VERILOG_FILE FPGA/AHB_VGA/vga_console.v
