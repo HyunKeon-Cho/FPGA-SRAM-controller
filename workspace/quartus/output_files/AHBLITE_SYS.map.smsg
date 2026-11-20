@@ -1,0 +1,1 @@
+Warning (10268): Verilog HDL information at AHB2BRAM.v(100): always construct contains both blocking and non-blocking assignments File: C:/Users/idec/Desktop/chohyunkeon/project/FPGA-SRAM-controller/workspace/quartus/FPGA/AHB_BRAM/AHB2BRAM.v Line: 100
